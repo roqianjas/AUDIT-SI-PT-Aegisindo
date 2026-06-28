@@ -1,0 +1,55 @@
+/* =============================================================
+   themes.css — Aegis Navy Theme (v2)
+   PT Aegisindo Mitra Sejati · Audit SI COBIT 2019
+   ============================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --navy: #0f1b2d;
+  --navy-800: #162032;
+  --navy-700: #1e2d44;
+  --navy-600: #2a3f5f;
+  --teal: #0d9488;
+  --teal-light: #14b8a6;
+  --teal-bright: #2dd4bf;
+  --teal-bg: #f0fdfa;
+  --gold: #f59e0b;
+  --gold-bg: #fffbeb;
+  --coral: #ef4444;
+  --coral-bg: #fef2f2;
+  --slate-50: #f8fafc;
+  --slate-100: #f1f5f9;
+  --slate-200: #e2e8f0;
+  --slate-300: #cbd5e1;
+  --slate-400: #94a3b8;
+  --slate-500: #64748b;
+  --slate-600: #475569;
+  --slate-700: #334155;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: #dfe3ea;
+  margin: 0;
+  padding: 28px 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+.slide {
+  width: 1280px;
+  height: 720px;
+  background: white;
+  box-shadow: 0 20px 60px -10px rgba(15,23,42,0.15);
+  overflow: hidden;
+  position: relative;
+  margin: 28px auto;
+}
+
+iconify-icon { display: inline-block; }
+
+@media print {
+  body { background: white; padding: 0; margin: 0; }
+  .slide { margin: 0; box-shadow: none; page-break-after: always; break-after: page; }
+  .slide:last-child { page-break-after: auto; break-after: auto; }
+}

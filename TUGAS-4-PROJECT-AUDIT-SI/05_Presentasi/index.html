@@ -1,0 +1,1234 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<title>Audit Tata Kelola TI — PT Aegisindo Mitra Sejati</title>
+<meta name="description" content="Presentasi Audit Sistem Informasi berbasis COBIT 2019">
+<script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="themes.css" />
+</head>
+<body>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SLIDE 1 — COVER
+     Full dark navy, split into left text + right stat panel
+     ══════════════════════════════════════════════════════════ -->
+<div class="slide" id="slide-cover">
+  <!-- full dark bg -->
+  <div style="position:absolute;inset:0;background:linear-gradient(160deg,#0f1b2d 0%,#162032 50%,#1a2b42 100%);"></div>
+
+  <!-- geometric accent: top-right triangle -->
+  <div style="position:absolute;top:0;right:0;width:0;height:0;border-top:720px solid rgba(13,148,136,0.07);border-left:640px solid transparent;z-index:1;"></div>
+
+  <!-- bottom teal bar -->
+  <div style="position:absolute;bottom:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#0d9488,#2dd4bf,#f59e0b);z-index:10;"></div>
+
+  <!-- UNM logo + brand top-left -->
+  <div style="position:absolute;left:56px;top:40px;z-index:5;display:flex;align-items:center;gap:14px;">
+    <img src="assets/images/logo-unm.png" alt="UNM" style="width:44px;height:44px;object-fit:contain;background:rgba(255,255,255,0.08);border-radius:10px;padding:4px;">
+    <div>
+      <div style="font-size:15px;font-weight:800;color:white;letter-spacing:2px;">UNM</div>
+      <div style="font-size:8px;font-weight:600;color:#64748b;letter-spacing:2.5px;">UNIVERSITAS NUSA MANDIRI</div>
+    </div>
+  </div>
+
+  <!-- LEFT: main title content -->
+  <div style="position:absolute;left:56px;top:130px;width:560px;z-index:5;">
+    <!-- pill -->
+    <div style="display:inline-flex;align-items:center;gap:6px;padding:6px 16px;background:rgba(13,148,136,0.15);border:1px solid rgba(13,148,136,0.3);border-radius:6px;font-size:11px;font-weight:700;color:#2dd4bf;letter-spacing:0.5px;margin-bottom:20px;">
+      <iconify-icon icon="lucide:shield-check" width="13" height="13"></iconify-icon>
+      TUGAS MATA KULIAH — AUDIT SISTEM INFORMASI
+    </div>
+
+    <h1 style="font-size:44px;font-weight:900;color:white;line-height:1.1;letter-spacing:-1px;margin:0;">
+      Audit Tata Kelola TI
+    </h1>
+    <h1 style="font-size:44px;font-weight:900;color:#2dd4bf;line-height:1.1;letter-spacing:-1px;margin:4px 0 0 0;">
+      PT Aegisindo
+    </h1>
+    <!-- teal + gold gradient bar -->
+    <div style="width:64px;height:4px;background:linear-gradient(90deg,#0d9488,#f59e0b);border-radius:2px;margin:20px 0;"></div>
+
+    <p style="font-size:14px;color:#94a3b8;line-height:1.7;margin:0;max-width:460px;">
+      Penilaian Capability Level & Analisis GAP pada 5 Domain COBIT 2019 untuk meningkatkan tata kelola TI perusahaan.
+    </p>
+  </div>
+
+  <!-- RIGHT: vertical stat strip -->
+  <div style="position:absolute;right:0;top:0;bottom:0;width:380px;background:rgba(255,255,255,0.03);border-left:1px solid rgba(255,255,255,0.06);z-index:2;display:flex;flex-direction:column;justify-content:center;padding:0 44px;">
+
+    <!-- stat row 1 -->
+    <div style="padding:20px 0;border-bottom:1px solid rgba(255,255,255,0.08);">
+      <div style="font-size:11px;font-weight:600;color:#64748b;letter-spacing:1.5px;text-transform:uppercase;">Domain Audit</div>
+      <div style="font-size:32px;font-weight:900;color:white;margin-top:4px;">5</div>
+      <div style="font-size:12px;color:#94a3b8;margin-top:2px;">APO14 · BAI09 · DSS01 · DSS04 · DSS05</div>
+    </div>
+
+    <!-- stat row 2 -->
+    <div style="padding:20px 0;border-bottom:1px solid rgba(255,255,255,0.08);">
+      <div style="font-size:11px;font-weight:600;color:#64748b;letter-spacing:1.5px;text-transform:uppercase;">Responden</div>
+      <div style="font-size:32px;font-weight:900;color:white;margin-top:4px;">6</div>
+      <div style="font-size:12px;color:#94a3b8;margin-top:2px;">RACI lintas divisi perusahaan</div>
+    </div>
+
+    <!-- stat row 3 -->
+    <div style="padding:20px 0;border-bottom:1px solid rgba(255,255,255,0.08);">
+      <div style="font-size:11px;font-weight:600;color:#64748b;letter-spacing:1.5px;text-transform:uppercase;">Framework</div>
+      <div style="font-size:32px;font-weight:900;color:#2dd4bf;margin-top:4px;">COBIT 2019</div>
+      <div style="font-size:12px;color:#94a3b8;margin-top:2px;">Standar internasional tata kelola TI</div>
+    </div>
+
+    <!-- stat row 4 -->
+    <div style="padding:20px 0;">
+      <div style="font-size:11px;font-weight:600;color:#64748b;letter-spacing:1.5px;text-transform:uppercase;">Gap Level</div>
+      <div style="font-size:32px;font-weight:900;color:#f59e0b;margin-top:4px;">1 – 2</div>
+      <div style="font-size:12px;color:#94a3b8;margin-top:2px;">Kesenjangan as-is vs to-be</div>
+    </div>
+  </div>
+
+  <!-- BOTTOM LEFT: credits -->
+  <div style="position:absolute;left:56px;bottom:36px;z-index:5;display:flex;gap:48px;">
+    <div>
+      <div style="font-size:9px;font-weight:700;color:#475569;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:5px;">Tim Penyusun</div>
+      <div style="font-size:13px;font-weight:600;color:#cbd5e1;">Dinda Callista · Alim Fatun Rofiah · Nur Fikri</div>
+    </div>
+    <div>
+      <div style="font-size:9px;font-weight:700;color:#475569;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:5px;">Dosen Pengampu</div>
+      <div style="font-size:13px;font-weight:600;color:#cbd5e1;">Juarni Siregar, S.Pd., M.Kom</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SLIDE 2 — AGENDA
+     Horizontal rows / timeline feel — no cards
+     ══════════════════════════════════════════════════════════ -->
+<div class="slide" id="slide-agenda">
+  <!-- bg -->
+  <div style="position:absolute;inset:0;background:linear-gradient(180deg,#f8fafc 0%,#ffffff 100%);"></div>
+
+  <!-- top navy header bar -->
+  <div style="position:absolute;top:0;left:0;right:0;height:52px;background:#0f1b2d;display:flex;align-items:center;justify-content:space-between;padding:0 48px;z-index:5;">
+    <span style="font-size:11px;font-weight:700;color:#2dd4bf;letter-spacing:2px;">02 · AGENDA</span>
+    <span style="font-size:11px;font-weight:500;color:#64748b;">PT Aegisindo Mitra Sejati</span>
+  </div>
+
+  <!-- left teal accent -->
+  <div style="position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,#0d9488,#2dd4bf);z-index:6;"></div>
+
+  <!-- content -->
+  <div style="position:relative;z-index:4;padding:76px 56px 40px 56px;height:100%;box-sizing:border-box;display:flex;flex-direction:column;">
+    <h1 style="font-size:34px;font-weight:900;color:#0f1b2d;margin:0 0 6px 0;letter-spacing:-0.5px;">Agenda Presentasi</h1>
+    <div style="width:56px;height:4px;background:#0d9488;border-radius:2px;margin-bottom:28px;"></div>
+
+    <!-- agenda items as full-width horizontal rows -->
+    <div style="flex:1;display:flex;flex-direction:column;gap:0;">
+
+      <!-- row -->
+      <div style="display:flex;align-items:center;padding:13px 0;border-bottom:1px solid #e2e8f0;">
+        <div style="width:36px;height:36px;background:#0f1b2d;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:#2dd4bf;flex-shrink:0;">01</div>
+        <div style="margin-left:16px;flex:1;">
+          <div style="font-size:15px;font-weight:700;color:#0f1b2d;">Latar Belakang & Profil Perusahaan</div>
+        </div>
+        <div style="font-size:12px;color:#94a3b8;font-weight:500;">Mengapa audit SI diperlukan</div>
+        <iconify-icon icon="lucide:chevron-right" width="18" height="18" style="color:#cbd5e1;margin-left:12px;"></iconify-icon>
+      </div>
+
+      <div style="display:flex;align-items:center;padding:13px 0;border-bottom:1px solid #e2e8f0;">
+        <div style="width:36px;height:36px;background:#0f1b2d;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:#2dd4bf;flex-shrink:0;">02</div>
+        <div style="margin-left:16px;flex:1;">
+          <div style="font-size:15px;font-weight:700;color:#0f1b2d;">Framework COBIT 2019</div>
+        </div>
+        <div style="font-size:12px;color:#94a3b8;font-weight:500;">Prinsip & capability level</div>
+        <iconify-icon icon="lucide:chevron-right" width="18" height="18" style="color:#cbd5e1;margin-left:12px;"></iconify-icon>
+      </div>
+
+      <div style="display:flex;align-items:center;padding:13px 0;border-bottom:1px solid #e2e8f0;">
+        <div style="width:36px;height:36px;background:#0f1b2d;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:#2dd4bf;flex-shrink:0;">03</div>
+        <div style="margin-left:16px;flex:1;">
+          <div style="font-size:15px;font-weight:700;color:#0f1b2d;">5 Domain Audit & RACI</div>
+        </div>
+        <div style="font-size:12px;color:#94a3b8;font-weight:500;">Fokus area audit perusahaan</div>
+        <iconify-icon icon="lucide:chevron-right" width="18" height="18" style="color:#cbd5e1;margin-left:12px;"></iconify-icon>
+      </div>
+
+      <div style="display:flex;align-items:center;padding:13px 0;border-bottom:1px solid #e2e8f0;">
+        <div style="width:36px;height:36px;background:#0f1b2d;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:#2dd4bf;flex-shrink:0;">04</div>
+        <div style="margin-left:16px;flex:1;">
+          <div style="font-size:15px;font-weight:700;color:#0f1b2d;">Metodologi Penelitian</div>
+        </div>
+        <div style="font-size:12px;color:#94a3b8;font-weight:500;">Alur kerja & teknik pengumpulan</div>
+        <iconify-icon icon="lucide:chevron-right" width="18" height="18" style="color:#cbd5e1;margin-left:12px;"></iconify-icon>
+      </div>
+
+      <!-- highlighted section divider -->
+      <div style="display:flex;align-items:center;padding:6px 0;margin:4px 0;">
+        <div style="flex:1;height:1px;background:#0d9488;"></div>
+        <span style="padding:0 12px;font-size:10px;font-weight:700;color:#0d9488;letter-spacing:1.5px;">HASIL & ANALISIS</span>
+        <div style="flex:1;height:1px;background:#0d9488;"></div>
+      </div>
+
+      <div style="display:flex;align-items:center;padding:13px 0;border-bottom:1px solid #e2e8f0;">
+        <div style="width:36px;height:36px;background:#0d9488;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:white;flex-shrink:0;">05</div>
+        <div style="margin-left:16px;flex:1;">
+          <div style="font-size:15px;font-weight:700;color:#0f1b2d;">Hasil Capability Level</div>
+        </div>
+        <div style="font-size:12px;color:#94a3b8;font-weight:500;">Profil kapabilitas 5 domain</div>
+        <iconify-icon icon="lucide:chevron-right" width="18" height="18" style="color:#cbd5e1;margin-left:12px;"></iconify-icon>
+      </div>
+
+      <div style="display:flex;align-items:center;padding:13px 0;border-bottom:1px solid #e2e8f0;">
+        <div style="width:36px;height:36px;background:#0d9488;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:white;flex-shrink:0;">06</div>
+        <div style="margin-left:16px;flex:1;">
+          <div style="font-size:15px;font-weight:700;color:#0f1b2d;">GAP Analysis & Temuan Utama</div>
+        </div>
+        <div style="font-size:12px;color:#94a3b8;font-weight:500;">Kesenjangan as-is vs to-be</div>
+        <iconify-icon icon="lucide:chevron-right" width="18" height="18" style="color:#cbd5e1;margin-left:12px;"></iconify-icon>
+      </div>
+
+      <div style="display:flex;align-items:center;padding:13px 0;border-bottom:1px solid #e2e8f0;">
+        <div style="width:36px;height:36px;background:#f59e0b;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:white;flex-shrink:0;">07</div>
+        <div style="margin-left:16px;flex:1;">
+          <div style="font-size:15px;font-weight:700;color:#0f1b2d;">Rekomendasi & Roadmap</div>
+        </div>
+        <div style="font-size:12px;color:#94a3b8;font-weight:500;">Strategi perbaikan 12 bulan</div>
+        <iconify-icon icon="lucide:chevron-right" width="18" height="18" style="color:#cbd5e1;margin-left:12px;"></iconify-icon>
+      </div>
+
+      <div style="display:flex;align-items:center;padding:13px 0;">
+        <div style="width:36px;height:36px;background:#0f1b2d;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:#f59e0b;flex-shrink:0;">08</div>
+        <div style="margin-left:16px;flex:1;">
+          <div style="font-size:15px;font-weight:700;color:#0f1b2d;">Kesimpulan & Saran</div>
+        </div>
+        <div style="font-size:12px;color:#94a3b8;font-weight:500;">Penutup & rekomendasi akhir</div>
+        <iconify-icon icon="lucide:chevron-right" width="18" height="18" style="color:#cbd5e1;margin-left:12px;"></iconify-icon>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SLIDE 3 — LATAR BELAKANG
+     3 column layout with TOP COLOR BAND (not cards)
+     ══════════════════════════════════════════════════════════ -->
+<div class="slide" id="slide-latar-belakang">
+  <div style="position:absolute;inset:0;background:#ffffff;"></div>
+
+  <!-- top navy bar -->
+  <div style="position:absolute;top:0;left:0;right:0;height:52px;background:#0f1b2d;display:flex;align-items:center;justify-content:space-between;padding:0 48px;z-index:5;">
+    <span style="font-size:11px;font-weight:700;color:#2dd4bf;letter-spacing:2px;">03 · LATAR BELAKANG</span>
+    <span style="font-size:11px;font-weight:500;color:#64748b;">PT Aegisindo Mitra Sejati</span>
+  </div>
+
+  <!-- left teal accent -->
+  <div style="position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,#0d9488,#2dd4bf);z-index:6;"></div>
+
+  <div style="position:relative;z-index:4;padding:76px 56px 32px 56px;height:100%;box-sizing:border-box;display:flex;flex-direction:column;">
+
+    <h1 style="font-size:28px;font-weight:900;color:#0f1b2d;margin:0 0 4px 0;letter-spacing:-0.3px;">Mengapa Audit SI Diperlukan di PT Aegisindo?</h1>
+    <div style="width:56px;height:4px;background:#0d9488;border-radius:2px;margin-bottom:10px;"></div>
+    <p style="font-size:13px;color:#64748b;line-height:1.5;margin:0 0 20px 0;max-width:700px;">
+      Ketergantungan tinggi pada infrastruktur TI & pengelolaan sistem marketplace menuntut tata kelola yang sistematis dan terstandar.
+    </p>
+
+    <!-- 3-column sections with top color band — NOT cards -->
+    <div style="display:flex;gap:0;flex:1;min-height:0;">
+
+      <!-- col 1 -->
+      <div style="flex:1;display:flex;flex-direction:column;">
+        <!-- top colored band -->
+        <div style="height:6px;background:#0d9488;"></div>
+        <div style="padding:20px 24px 20px 20px;background:#f8fafc;flex:1;border-right:1px solid #e2e8f0;">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+            <div style="font-size:28px;font-weight:900;color:#0d9488;">01</div>
+            <iconify-icon icon="lucide:database" width="22" height="22" style="color:#0d9488;"></iconify-icon>
+          </div>
+          <div style="font-size:16px;font-weight:800;color:#0f1b2d;margin-bottom:10px;line-height:1.3;">Pengelolaan Data Belum Optimal</div>
+          <p style="font-size:13px;color:#475569;line-height:1.65;margin:0;">
+            Data produk safety & K3 tersebar di beberapa marketplace tanpa <strong>master data terpusat</strong> — risiko duplikasi dan inkonsistensi tinggi.
+          </p>
+        </div>
+      </div>
+
+      <!-- col 2 -->
+      <div style="flex:1;display:flex;flex-direction:column;">
+        <div style="height:6px;background:#f59e0b;"></div>
+        <div style="padding:20px 24px 20px 20px;background:#f8fafc;flex:1;border-right:1px solid #e2e8f0;">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+            <div style="font-size:28px;font-weight:900;color:#f59e0b;">02</div>
+            <iconify-icon icon="lucide:shield-alert" width="22" height="22" style="color:#f59e0b;"></iconify-icon>
+          </div>
+          <div style="font-size:16px;font-weight:800;color:#0f1b2d;margin-bottom:10px;line-height:1.3;">Keamanan & Kontinuitas Rentan</div>
+          <p style="font-size:13px;color:#475569;line-height:1.65;margin:0;">
+            Backup rutin sudah berjalan namun belum ada <strong>BCP/DRP formal</strong> — sehingga belum siap menghadapi insiden besar.
+          </p>
+        </div>
+      </div>
+
+      <!-- col 3 -->
+      <div style="flex:1;display:flex;flex-direction:column;">
+        <div style="height:6px;background:#ef4444;"></div>
+        <div style="padding:20px 24px 20px 20px;background:#f8fafc;flex:1;">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+            <div style="font-size:28px;font-weight:900;color:#ef4444;">03</div>
+            <iconify-icon icon="lucide:package" width="22" height="22" style="color:#ef4444;"></iconify-icon>
+          </div>
+          <div style="font-size:16px;font-weight:800;color:#0f1b2d;margin-bottom:10px;line-height:1.3;">Aset TI Belum Terkelola Formal</div>
+          <p style="font-size:13px;color:#475569;line-height:1.65;margin:0;">
+            Pencatatan aset hardware & software masih manual — belum ada <strong>lifecycle management</strong> yang terstruktur.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- bottom dark callout bar -->
+    <div style="margin-top:16px;padding:14px 20px;background:#0f1b2d;display:flex;align-items:center;gap:14px;">
+      <iconify-icon icon="lucide:quote" width="18" height="18" style="color:#2dd4bf;flex-shrink:0;"></iconify-icon>
+      <p style="font-size:13px;color:#94a3b8;margin:0;line-height:1.5;">
+        <strong style="color:white;">Audit SI</strong> (Weber 1999 dalam Solechan, 2021) → pengumpulan dan evaluasi bukti pengendalian internal, integritas data, keandalan & efisiensi sistem berbasis komputer.
+      </p>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SLIDE 4 — PROFIL PERUSAHAAN
+     ══════════════════════════════════════════════════════════ -->
+<div class="slide" id="slide-profil">
+  <div style="position:absolute;inset:0;background:#fff;"></div>
+  <div style="position:absolute;top:0;left:0;right:0;height:52px;background:#0f1b2d;display:flex;align-items:center;justify-content:space-between;padding:0 48px;z-index:5;">
+    <span style="font-size:11px;font-weight:700;color:#2dd4bf;letter-spacing:2px;">04 · PROFIL PERUSAHAAN</span>
+    <span style="font-size:11px;font-weight:500;color:#64748b;">PT Aegisindo Mitra Sejati</span>
+  </div>
+  <div style="position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,#0d9488,#2dd4bf);z-index:6;"></div>
+
+  <div style="position:relative;z-index:4;padding:76px 56px 32px 56px;height:100%;box-sizing:border-box;display:flex;flex-direction:column;">
+    <h1 style="font-size:28px;font-weight:900;color:#0f1b2d;margin:0 0 4px 0;">Studi Kasus: PT Aegisindo Mitra Sejati</h1>
+    <div style="width:56px;height:4px;background:#0d9488;border-radius:2px;margin-bottom:10px;"></div>
+    <p style="font-size:13px;color:#64748b;line-height:1.5;margin:0 0 18px 0;">Distributor alat keselamatan kerja (K3/safety) berlokasi di kawasan industri Cikarang, Kab. Bekasi — penjualan multi-saluran namun belum memiliki sistem informasi terintegrasi.</p>
+
+    <!-- 2-column layout -->
+    <div style="display:flex;gap:24px;flex:1;min-height:0;">
+      <!-- LEFT: bisnis & saluran -->
+      <div style="flex:1;display:flex;flex-direction:column;gap:0;">
+        <div style="height:6px;background:#0d9488;"></div>
+        <div style="background:#f8fafc;padding:18px 20px;flex:1;border-right:1px solid #e2e8f0;">
+          <div style="font-size:10px;font-weight:700;color:#64748b;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px;">Bisnis & Saluran Penjualan</div>
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;">
+            <iconify-icon icon="lucide:hard-hat" width="20" height="20" style="color:#0d9488;"></iconify-icon>
+            <div style="font-size:14px;font-weight:800;color:#0f1b2d;">Distributor Alat K3 / Safety</div>
+          </div>
+          <div style="font-size:10px;font-weight:700;color:#64748b;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px;">Saluran Penjualan</div>
+          <!-- rows -->
+          <div style="display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid #e2e8f0;">
+            <iconify-icon icon="lucide:store" width="16" height="16" style="color:#0d9488;"></iconify-icon>
+            <div><div style="font-size:13px;font-weight:700;color:#0f1b2d;">Marketplace Online</div><div style="font-size:11px;color:#64748b;">Tokopedia, Lazada, Ralali, Indotrading</div></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid #e2e8f0;">
+            <iconify-icon icon="lucide:message-circle" width="16" height="16" style="color:#0d9488;"></iconify-icon>
+            <div><div style="font-size:13px;font-weight:700;color:#0f1b2d;">WhatsApp Business</div><div style="font-size:11px;color:#64748b;">Saluran komunikasi utama pelanggan</div></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;padding:8px 0;">
+            <iconify-icon icon="lucide:building-2" width="16" height="16" style="color:#0d9488;"></iconify-icon>
+            <div><div style="font-size:13px;font-weight:700;color:#0f1b2d;">Toko Fisik & Sales Lapangan</div><div style="font-size:11px;color:#64748b;">Penjualan langsung & distribusi</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: struktur org chart image -->
+      <div style="flex:1;display:flex;flex-direction:column;gap:0;">
+        <div style="height:6px;background:#f59e0b;"></div>
+        <div style="background:#f8fafc;padding:18px 20px;flex:1;">
+          <div style="font-size:10px;font-weight:700;color:#64748b;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px;">Struktur Organisasi</div>
+          <img src="../03_Data/charts/gambar_5_struktur_organisasi.png" alt="Struktur Organisasi" style="width:100%;border-radius:6px;border:1px solid #e2e8f0;">
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:14px;padding:12px 20px;background:#0f1b2d;display:flex;align-items:center;gap:12px;">
+      <iconify-icon icon="lucide:alert-circle" width="18" height="18" style="color:#f59e0b;flex-shrink:0;"></iconify-icon>
+      <p style="font-size:13px;color:#94a3b8;margin:0;"><strong style="color:white;">Masalah utama:</strong> Data tersebar di spreadsheet, WhatsApp, & marketplace tanpa integrasi — belum ada sistem informasi terpusat.</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SLIDE 5 — RUMUSAN MASALAH & TUJUAN
+     ══════════════════════════════════════════════════════════ -->
+<div class="slide" id="slide-rumusan">
+  <div style="position:absolute;inset:0;background:#fff;"></div>
+  <div style="position:absolute;top:0;left:0;right:0;height:52px;background:#0f1b2d;display:flex;align-items:center;justify-content:space-between;padding:0 48px;z-index:5;">
+    <span style="font-size:11px;font-weight:700;color:#2dd4bf;letter-spacing:2px;">05 · RUMUSAN & TUJUAN</span>
+    <span style="font-size:11px;font-weight:500;color:#64748b;">PT Aegisindo Mitra Sejati</span>
+  </div>
+  <div style="position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,#0d9488,#2dd4bf);z-index:6;"></div>
+
+  <div style="position:relative;z-index:4;padding:76px 56px 32px 56px;height:100%;box-sizing:border-box;display:flex;flex-direction:column;">
+    <h1 style="font-size:28px;font-weight:900;color:#0f1b2d;margin:0 0 4px 0;">Rumusan Masalah & Tujuan Penelitian</h1>
+    <div style="width:56px;height:4px;background:#0d9488;border-radius:2px;margin-bottom:18px;"></div>
+
+    <div style="display:flex;gap:0;flex:1;min-height:0;">
+      <!-- LEFT: Rumusan Masalah -->
+      <div style="flex:1;display:flex;flex-direction:column;">
+        <div style="height:6px;background:#0d9488;"></div>
+        <div style="background:#f8fafc;padding:20px;flex:1;border-right:1px solid #e2e8f0;">
+          <div style="font-size:10px;font-weight:700;color:#64748b;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px;">
+            <iconify-icon icon="lucide:help-circle" width="14" height="14" style="color:#0d9488;margin-right:4px;"></iconify-icon>
+            Rumusan Masalah
+          </div>
+          <div style="display:flex;gap:10px;align-items:flex-start;margin-bottom:14px;">
+            <div style="width:28px;height:28px;background:#0d9488;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:white;flex-shrink:0;">1</div>
+            <p style="font-size:13px;color:#334155;line-height:1.5;margin:0;">Bagaimana <strong>capability level</strong> tata kelola TI pada 5 domain COBIT 2019 (APO14, BAI09, DSS01, DSS04, DSS05)?</p>
+          </div>
+          <div style="display:flex;gap:10px;align-items:flex-start;margin-bottom:14px;">
+            <div style="width:28px;height:28px;background:#0d9488;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:white;flex-shrink:0;">2</div>
+            <p style="font-size:13px;color:#334155;line-height:1.5;margin:0;">Seberapa besar <strong>GAP</strong> antara kondisi as-is dengan target to-be pada setiap domain?</p>
+          </div>
+          <div style="display:flex;gap:10px;align-items:flex-start;">
+            <div style="width:28px;height:28px;background:#0d9488;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:white;flex-shrink:0;">3</div>
+            <p style="font-size:13px;color:#334155;line-height:1.5;margin:0;">Rekomendasi perbaikan apa yang dapat diberikan untuk <strong>meningkatkan capability level</strong>?</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Tujuan -->
+      <div style="flex:1;display:flex;flex-direction:column;">
+        <div style="height:6px;background:#f59e0b;"></div>
+        <div style="background:#f8fafc;padding:20px;flex:1;">
+          <div style="font-size:10px;font-weight:700;color:#64748b;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px;">
+            <iconify-icon icon="lucide:target" width="14" height="14" style="color:#f59e0b;margin-right:4px;"></iconify-icon>
+            Tujuan Penelitian
+          </div>
+          <div style="display:flex;gap:10px;align-items:flex-start;margin-bottom:14px;">
+            <div style="width:28px;height:28px;background:#f59e0b;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:white;flex-shrink:0;">1</div>
+            <p style="font-size:13px;color:#334155;line-height:1.5;margin:0;"><strong>Mengukur</strong> capability level di 5 domain COBIT 2019 melalui kuesioner terhadap 6 responden internal.</p>
+          </div>
+          <div style="display:flex;gap:10px;align-items:flex-start;margin-bottom:14px;">
+            <div style="width:28px;height:28px;background:#f59e0b;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:white;flex-shrink:0;">2</div>
+            <p style="font-size:13px;color:#334155;line-height:1.5;margin:0;"><strong>Mengidentifikasi GAP</strong> antara kondisi tata kelola TI saat ini dengan target yang ditetapkan.</p>
+          </div>
+          <div style="display:flex;gap:10px;align-items:flex-start;">
+            <div style="width:28px;height:28px;background:#f59e0b;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:white;flex-shrink:0;">3</div>
+            <p style="font-size:13px;color:#334155;line-height:1.5;margin:0;"><strong>Menyusun rekomendasi</strong> perbaikan yang konkret & implementatif sesuai target level.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:14px;padding:12px 20px;background:#0f1b2d;display:flex;align-items:center;gap:12px;">
+      <iconify-icon icon="lucide:info" width="18" height="18" style="color:#2dd4bf;flex-shrink:0;"></iconify-icon>
+      <p style="font-size:13px;color:#94a3b8;margin:0;"><strong style="color:white;">Ruang lingkup:</strong> 5 domain COBIT 2019 · 6 responden internal · 9 pertanyaan/domain (3 level × 3 pertanyaan)</p>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SLIDE 6 — FRAMEWORK COBIT 2019
+     ══════════════════════════════════════════════════════════ -->
+<div class="slide" id="slide-cobit">
+  <div style="position:absolute;inset:0;background:#fff;"></div>
+  <div style="position:absolute;top:0;left:0;right:0;height:52px;background:#0f1b2d;display:flex;align-items:center;justify-content:space-between;padding:0 48px;z-index:5;">
+    <span style="font-size:11px;font-weight:700;color:#2dd4bf;letter-spacing:2px;">06 · FRAMEWORK</span>
+    <span style="font-size:11px;font-weight:500;color:#64748b;">PT Aegisindo Mitra Sejati</span>
+  </div>
+  <div style="position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,#0d9488,#2dd4bf);z-index:6;"></div>
+
+  <div style="position:relative;z-index:4;padding:76px 56px 32px 56px;height:100%;box-sizing:border-box;display:flex;flex-direction:column;">
+    <h1 style="font-size:28px;font-weight:900;color:#0f1b2d;margin:0 0 4px 0;">COBIT 2019 — Framework Tata Kelola TI</h1>
+    <div style="width:56px;height:4px;background:#0d9488;border-radius:2px;margin-bottom:14px;"></div>
+
+    <div style="display:flex;gap:0;flex:1;min-height:0;">
+      <!-- LEFT: Definisi -->
+      <div style="flex:1;display:flex;flex-direction:column;">
+        <div style="height:6px;background:#0d9488;"></div>
+        <div style="background:#f8fafc;padding:18px 20px;flex:1;border-right:1px solid #e2e8f0;">
+          <div style="font-size:10px;font-weight:700;color:#64748b;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px;">Definisi</div>
+          <p style="font-size:13px;color:#334155;line-height:1.6;margin:0 0 14px 0;">
+            <strong>COBIT 2019</strong> (Control Objectives for Information and Related Technologies) adalah kerangka kerja tata kelola TI yang dikembangkan oleh <strong>ISACA</strong>, dirilis 2018 sebagai pemutakhiran COBIT 5.
+          </p>
+          <div style="font-size:10px;font-weight:700;color:#64748b;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px;">Karakteristik Utama</div>
+          <div style="display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid #e2e8f0;">
+            <iconify-icon icon="lucide:layers" width="16" height="16" style="color:#0d9488;"></iconify-icon>
+            <div><strong style="font-size:13px;color:#0f1b2d;">40 Proses</strong> <span style="font-size:11px;color:#64748b;">— 5 Governance + 35 Management</span></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid #e2e8f0;">
+            <iconify-icon icon="lucide:shield-check" width="16" height="16" style="color:#0d9488;"></iconify-icon>
+            <div><strong style="font-size:13px;color:#0f1b2d;">6 Prinsip</strong> <span style="font-size:11px;color:#64748b;">— Sistem & Kerangka Tata Kelola</span></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid #e2e8f0;">
+            <iconify-icon icon="lucide:gauge" width="16" height="16" style="color:#0d9488;"></iconify-icon>
+            <div><strong style="font-size:13px;color:#0f1b2d;">Capability Level 0–5</strong> <span style="font-size:11px;color:#64748b;">— Berbasis CMMI</span></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;padding:7px 0;">
+            <iconify-icon icon="lucide:settings-2" width="16" height="16" style="color:#0d9488;"></iconify-icon>
+            <div><strong style="font-size:13px;color:#0f1b2d;">Design Factors</strong> <span style="font-size:11px;color:#64748b;">— Fleksibel sesuai konteks organisasi</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Perbandingan tabel -->
+      <div style="flex:1;display:flex;flex-direction:column;">
+        <div style="height:6px;background:#f59e0b;"></div>
+        <div style="background:#f8fafc;padding:18px 20px;flex:1;">
+          <div style="font-size:10px;font-weight:700;color:#64748b;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px;">COBIT 5 vs COBIT 2019</div>
+          <table style="width:100%;border-collapse:collapse;font-size:12px;">
+            <thead>
+              <tr style="border-bottom:2px solid #0f1b2d;">
+                <th style="text-align:left;padding:8px 6px;color:#0f1b2d;font-weight:700;">Aspek</th>
+                <th style="text-align:center;padding:8px 6px;color:#64748b;font-weight:600;">COBIT 5</th>
+                <th style="text-align:center;padding:8px 6px;color:#0d9488;font-weight:700;">COBIT 2019</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid #e2e8f0;"><td style="padding:8px 6px;color:#334155;">Jumlah Proses</td><td style="text-align:center;color:#64748b;">37</td><td style="text-align:center;font-weight:700;color:#0f1b2d;">40 (5+35)</td></tr>
+              <tr style="border-bottom:1px solid #e2e8f0;"><td style="padding:8px 6px;color:#334155;">Prinsip</td><td style="text-align:center;color:#64748b;">5</td><td style="text-align:center;font-weight:700;color:#0f1b2d;">6 prinsip</td></tr>
+              <tr style="border-bottom:1px solid #e2e8f0;"><td style="padding:8px 6px;color:#334155;">Capability Level</td><td style="text-align:center;color:#64748b;">0–5</td><td style="text-align:center;font-weight:700;color:#0f1b2d;">0–5 (CMMI)</td></tr>
+              <tr style="border-bottom:1px solid #e2e8f0;"><td style="padding:8px 6px;color:#334155;">Fleksibilitas</td><td style="text-align:center;color:#64748b;">Tetap</td><td style="text-align:center;font-weight:700;color:#0f1b2d;">Design factors</td></tr>
+              <tr><td style="padding:8px 6px;color:#334155;">Integrasi</td><td style="text-align:center;color:#64748b;">Terbatas</td><td style="text-align:center;font-weight:700;color:#0f1b2d;">ITIL+TOGAF+CMMI</td></tr>
+            </tbody>
+          </table>
+          <div style="margin-top:12px;font-size:11px;color:#64748b;font-style:italic;">Sumber: Syuhada (2021), Algiffary dkk. (2023)</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:14px;padding:12px 20px;background:#0f1b2d;display:flex;align-items:center;gap:12px;">
+      <iconify-icon icon="lucide:trending-up" width="18" height="18" style="color:#2dd4bf;flex-shrink:0;"></iconify-icon>
+      <p style="font-size:13px;color:#94a3b8;margin:0;"><strong style="color:white;">COBIT 2019</strong> — lebih fleksibel, berbasis CMMI, dan mendukung integrasi multi-framework.</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SLIDE 7 — 6 PRINSIP COBIT 2019
+     ══════════════════════════════════════════════════════════ -->
+<div class="slide" id="slide-prinsip">
+  <div style="position:absolute;inset:0;background:#fff;"></div>
+  <div style="position:absolute;top:0;left:0;right:0;height:52px;background:#0f1b2d;display:flex;align-items:center;justify-content:space-between;padding:0 48px;z-index:5;">
+    <span style="font-size:11px;font-weight:700;color:#2dd4bf;letter-spacing:2px;">07 · PRINSIP COBIT</span>
+    <span style="font-size:11px;font-weight:500;color:#64748b;">PT Aegisindo Mitra Sejati</span>
+  </div>
+  <div style="position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,#0d9488,#2dd4bf);z-index:6;"></div>
+
+  <div style="position:relative;z-index:4;padding:76px 56px 32px 56px;height:100%;box-sizing:border-box;display:flex;flex-direction:column;">
+    <h1 style="font-size:28px;font-weight:900;color:#0f1b2d;margin:0 0 4px 0;">6 Prinsip COBIT 2019</h1>
+    <div style="width:56px;height:4px;background:#0d9488;border-radius:2px;margin-bottom:8px;"></div>
+    <p style="font-size:13px;color:#64748b;margin:0 0 16px 0;">Terbagi 2 kelompok: <strong>Sistem Tata Kelola</strong> (3 prinsip) & <strong>Kerangka Tata Kelola</strong> (3 prinsip).</p>
+
+    <div style="display:flex;gap:0;flex:1;min-height:0;">
+      <!-- LEFT: Sistem Tata Kelola -->
+      <div style="flex:1;display:flex;flex-direction:column;">
+        <div style="height:6px;background:#0d9488;"></div>
+        <div style="background:#f8fafc;padding:18px 20px;flex:1;border-right:1px solid #e2e8f0;">
+          <div style="font-size:10px;font-weight:700;color:#0d9488;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px;">A · Sistem Tata Kelola</div>
+          <div style="display:flex;gap:12px;align-items:flex-start;margin-bottom:16px;">
+            <div style="width:32px;height:32px;background:#0d9488;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:900;color:white;flex-shrink:0;">1</div>
+            <div><div style="font-size:14px;font-weight:700;color:#0f1b2d;">Memenuhi Kebutuhan Stakeholder</div><div style="font-size:12px;color:#64748b;margin-top:2px;">Nilai TI selaras dengan ekspektasi pemangku kepentingan</div></div>
+          </div>
+          <div style="display:flex;gap:12px;align-items:flex-start;margin-bottom:16px;">
+            <div style="width:32px;height:32px;background:#0d9488;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:900;color:white;flex-shrink:0;">2</div>
+            <div><div style="font-size:14px;font-weight:700;color:#0f1b2d;">Pendekatan Holistik</div><div style="font-size:12px;color:#64748b;margin-top:2px;">Menggabungkan 7 komponen tata kelola yang saling terhubung</div></div>
+          </div>
+          <div style="display:flex;gap:12px;align-items:flex-start;">
+            <div style="width:32px;height:32px;background:#0d9488;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:900;color:white;flex-shrink:0;">3</div>
+            <div><div style="font-size:14px;font-weight:700;color:#0f1b2d;">Sistem Tata Kelola Dinamis</div><div style="font-size:12px;color:#64748b;margin-top:2px;">Adaptif terhadap perubahan faktor internal & eksternal</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Kerangka Tata Kelola -->
+      <div style="flex:1;display:flex;flex-direction:column;">
+        <div style="height:6px;background:#f59e0b;"></div>
+        <div style="background:#f8fafc;padding:18px 20px;flex:1;">
+          <div style="font-size:10px;font-weight:700;color:#f59e0b;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px;">B · Kerangka Tata Kelola</div>
+          <div style="display:flex;gap:12px;align-items:flex-start;margin-bottom:16px;">
+            <div style="width:32px;height:32px;background:#f59e0b;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:900;color:white;flex-shrink:0;">4</div>
+            <div><div style="font-size:14px;font-weight:700;color:#0f1b2d;">Pisahkan Tata Kelola dari Manajemen</div><div style="font-size:12px;color:#64748b;margin-top:2px;">Tata kelola memberi arah & memantau, manajemen menjalankan</div></div>
+          </div>
+          <div style="display:flex;gap:12px;align-items:flex-start;margin-bottom:16px;">
+            <div style="width:32px;height:32px;background:#f59e0b;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:900;color:white;flex-shrink:0;">5</div>
+            <div><div style="font-size:14px;font-weight:700;color:#0f1b2d;">Disesuaikan dengan Kebutuhan Organisasi</div><div style="font-size:12px;color:#64748b;margin-top:2px;">Memanfaatkan design factors agar sesuai konteks tiap organisasi</div></div>
+          </div>
+          <div style="display:flex;gap:12px;align-items:flex-start;">
+            <div style="width:32px;height:32px;background:#f59e0b;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:900;color:white;flex-shrink:0;">6</div>
+            <div><div style="font-size:14px;font-weight:700;color:#0f1b2d;">Tata Kelola End-to-End</div><div style="font-size:12px;color:#64748b;margin-top:2px;">Mencakup seluruh fungsi & proses TI, bukan hanya bagian TI</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SLIDE 8 — CAPABILITY LEVEL 0–5
+     ══════════════════════════════════════════════════════════ -->
+<div class="slide" id="slide-caplevel">
+  <div style="position:absolute;inset:0;background:#fff;"></div>
+  <div style="position:absolute;top:0;left:0;right:0;height:52px;background:#0f1b2d;display:flex;align-items:center;justify-content:space-between;padding:0 48px;z-index:5;">
+    <span style="font-size:11px;font-weight:700;color:#2dd4bf;letter-spacing:2px;">08 · CAPABILITY LEVEL</span>
+    <span style="font-size:11px;font-weight:500;color:#64748b;">PT Aegisindo Mitra Sejati</span>
+  </div>
+  <div style="position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,#0d9488,#2dd4bf);z-index:6;"></div>
+
+  <div style="position:relative;z-index:4;padding:76px 56px 32px 56px;height:100%;box-sizing:border-box;display:flex;flex-direction:column;">
+    <h1 style="font-size:28px;font-weight:900;color:#0f1b2d;margin:0 0 4px 0;">Capability Level COBIT 2019 (0–5)</h1>
+    <div style="width:56px;height:4px;background:#0d9488;border-radius:2px;margin-bottom:10px;"></div>
+    <p style="font-size:13px;color:#64748b;margin:0 0 16px 0;">Model kematangan proses berbasis CMMI — dari belum dilaksanakan hingga terus disempurnakan.</p>
+
+    <!-- 6 horizontal rows for levels -->
+    <div style="flex:1;display:flex;flex-direction:column;gap:0;">
+      <div style="display:flex;align-items:center;padding:11px 0;border-bottom:1px solid #e2e8f0;">
+        <div style="width:40px;height:40px;background:#94a3b8;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:900;color:white;flex-shrink:0;">0</div>
+        <div style="margin-left:16px;flex:1;"><div style="font-size:15px;font-weight:700;color:#0f1b2d;">Incomplete</div><div style="font-size:12px;color:#64748b;">Proses tidak dilaksanakan atau gagal mencapai tujuannya</div></div>
+      </div>
+      <div style="display:flex;align-items:center;padding:11px 0;border-bottom:1px solid #e2e8f0;">
+        <div style="width:40px;height:40px;background:#ef4444;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:900;color:white;flex-shrink:0;">1</div>
+        <div style="margin-left:16px;flex:1;"><div style="font-size:15px;font-weight:700;color:#0f1b2d;">Performed</div><div style="font-size:12px;color:#64748b;">Dilaksanakan & kurang lebih tercapai, namun masih intuitif & belum terorganisasi</div></div>
+        <div style="padding:4px 10px;background:#fef2f2;border:1px solid #fecaca;border-radius:4px;font-size:10px;font-weight:700;color:#ef4444;">APO14 · DSS04</div>
+      </div>
+      <div style="display:flex;align-items:center;padding:11px 0;border-bottom:1px solid #e2e8f0;">
+        <div style="width:40px;height:40px;background:#f59e0b;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:900;color:white;flex-shrink:0;">2</div>
+        <div style="margin-left:16px;flex:1;"><div style="font-size:15px;font-weight:700;color:#0f1b2d;">Managed</div><div style="font-size:12px;color:#64748b;">Direncanakan, dipantau, & dilaporkan — kegiatan dasar lengkap</div></div>
+        <div style="padding:4px 10px;background:#fffbeb;border:1px solid #fde68a;border-radius:4px;font-size:10px;font-weight:700;color:#f59e0b;">BAI09 · DSS01 · DSS05</div>
+      </div>
+      <div style="display:flex;align-items:center;padding:11px 0;border-bottom:1px solid #e2e8f0;">
+        <div style="width:40px;height:40px;background:#0d9488;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:900;color:white;flex-shrink:0;">3</div>
+        <div style="margin-left:16px;flex:1;"><div style="font-size:15px;font-weight:700;color:#0f1b2d;">Established</div><div style="font-size:12px;color:#64748b;">Terdefinisi baik melalui prosedur standar, diterapkan konsisten</div></div>
+        <div style="padding:4px 10px;background:#f0fdfa;border:1px solid #99f6e4;border-radius:4px;font-size:10px;font-weight:700;color:#0d9488;">Target 4 domain</div>
+      </div>
+      <div style="display:flex;align-items:center;padding:11px 0;border-bottom:1px solid #e2e8f0;">
+        <div style="width:40px;height:40px;background:#0f1b2d;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:900;color:#2dd4bf;flex-shrink:0;">4</div>
+        <div style="margin-left:16px;flex:1;"><div style="font-size:15px;font-weight:700;color:#0f1b2d;">Predictable</div><div style="font-size:12px;color:#64748b;">Diukur secara kuantitatif sehingga hasilnya dapat diprediksi</div></div>
+        <div style="padding:4px 10px;background:#0f1b2d;border-radius:4px;font-size:10px;font-weight:700;color:#2dd4bf;">Target DSS01</div>
+      </div>
+      <div style="display:flex;align-items:center;padding:11px 0;">
+        <div style="width:40px;height:40px;background:#0f1b2d;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:900;color:#f59e0b;flex-shrink:0;">5</div>
+        <div style="margin-left:16px;flex:1;"><div style="font-size:15px;font-weight:700;color:#0f1b2d;">Optimizing</div><div style="font-size:12px;color:#64748b;">Perbaikan berkelanjutan untuk mencapai tujuan organisasi</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SLIDE 9 — RATING SCALE N/P/L/F
+     ══════════════════════════════════════════════════════════ -->
+<div class="slide" id="slide-rating">
+  <div style="position:absolute;inset:0;background:#fff;"></div>
+  <div style="position:absolute;top:0;left:0;right:0;height:52px;background:#0f1b2d;display:flex;align-items:center;justify-content:space-between;padding:0 48px;z-index:5;">
+    <span style="font-size:11px;font-weight:700;color:#2dd4bf;letter-spacing:2px;">09 · RATING SCALE</span>
+    <span style="font-size:11px;font-weight:500;color:#64748b;">PT Aegisindo Mitra Sejati</span>
+  </div>
+  <div style="position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,#0d9488,#2dd4bf);z-index:6;"></div>
+
+  <div style="position:relative;z-index:4;padding:76px 56px 32px 56px;height:100%;box-sizing:border-box;display:flex;flex-direction:column;">
+    <h1 style="font-size:28px;font-weight:900;color:#0f1b2d;margin:0 0 4px 0;">Rating Scale Ketercapaian — N / P / L / F</h1>
+    <div style="width:56px;height:4px;background:#0d9488;border-radius:2px;margin-bottom:10px;"></div>
+    <p style="font-size:13px;color:#64748b;margin:0 0 20px 0;">Setiap level kapabilitas dinilai dengan persentase ketercapaian yang menentukan rating N, P, L, atau F.</p>
+
+    <div style="display:flex;gap:0;flex:1;min-height:0;">
+      <!-- N -->
+      <div style="flex:1;display:flex;flex-direction:column;">
+        <div style="height:6px;background:#94a3b8;"></div>
+        <div style="background:#f8fafc;padding:24px 18px;flex:1;border-right:1px solid #e2e8f0;display:flex;flex-direction:column;align-items:center;text-align:center;">
+          <div style="width:56px;height:56px;background:#94a3b8;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:900;color:white;margin-bottom:12px;">N</div>
+          <div style="font-size:22px;font-weight:900;color:#64748b;">0–15%</div>
+          <div style="font-size:14px;font-weight:700;color:#0f1b2d;margin-top:6px;">Not Achieved</div>
+          <div style="font-size:12px;color:#64748b;margin-top:6px;line-height:1.5;">Belum tercapai — proses belum dilaksanakan</div>
+        </div>
+      </div>
+      <!-- P -->
+      <div style="flex:1;display:flex;flex-direction:column;">
+        <div style="height:6px;background:#f59e0b;"></div>
+        <div style="background:#f8fafc;padding:24px 18px;flex:1;border-right:1px solid #e2e8f0;display:flex;flex-direction:column;align-items:center;text-align:center;">
+          <div style="width:56px;height:56px;background:#f59e0b;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:900;color:white;margin-bottom:12px;">P</div>
+          <div style="font-size:22px;font-weight:900;color:#f59e0b;">>15–50%</div>
+          <div style="font-size:14px;font-weight:700;color:#0f1b2d;margin-top:6px;">Partially Achieved</div>
+          <div style="font-size:12px;color:#64748b;margin-top:6px;line-height:1.5;">Sebagian tercapai — <strong>Level 3 semua domain</strong></div>
+        </div>
+      </div>
+      <!-- L -->
+      <div style="flex:1;display:flex;flex-direction:column;">
+        <div style="height:6px;background:#0d9488;"></div>
+        <div style="background:#f8fafc;padding:24px 18px;flex:1;border-right:1px solid #e2e8f0;display:flex;flex-direction:column;align-items:center;text-align:center;">
+          <div style="width:56px;height:56px;background:#0d9488;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:900;color:white;margin-bottom:12px;">L</div>
+          <div style="font-size:22px;font-weight:900;color:#0d9488;">>50–85%</div>
+          <div style="font-size:14px;font-weight:700;color:#0f1b2d;margin-top:6px;">Largely Achieved</div>
+          <div style="font-size:12px;color:#64748b;margin-top:6px;line-height:1.5;">Mayoritas tercapai — <strong>standar capability level</strong></div>
+        </div>
+      </div>
+      <!-- F -->
+      <div style="flex:1;display:flex;flex-direction:column;">
+        <div style="height:6px;background:#10b981;"></div>
+        <div style="background:#f8fafc;padding:24px 18px;flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;">
+          <div style="width:56px;height:56px;background:#10b981;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:900;color:white;margin-bottom:12px;">F</div>
+          <div style="font-size:22px;font-weight:900;color:#10b981;">>85–100%</div>
+          <div style="font-size:14px;font-weight:700;color:#0f1b2d;margin-top:6px;">Fully Achieved</div>
+          <div style="font-size:12px;color:#64748b;margin-top:6px;line-height:1.5;">Sepenuhnya tercapai — siap naik ke level berikutnya</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:14px;padding:12px 20px;background:#0f1b2d;display:flex;align-items:center;gap:12px;">
+      <iconify-icon icon="lucide:info" width="18" height="18" style="color:#2dd4bf;flex-shrink:0;"></iconify-icon>
+      <p style="font-size:13px;color:#94a3b8;margin:0;"><strong style="color:white;">Capability Level</strong> = Level tertinggi yang mencapai rating <strong style="color:#2dd4bf;">L</strong> atau <strong style="color:#10b981;">F</strong> secara berurutan.</p>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SLIDE 10 — 5 DOMAIN AUDIT
+     ══════════════════════════════════════════════════════════ -->
+<div class="slide" id="slide-domain">
+  <div style="position:absolute;inset:0;background:#fff;"></div>
+  <div style="position:absolute;top:0;left:0;right:0;height:52px;background:#0f1b2d;display:flex;align-items:center;justify-content:space-between;padding:0 48px;z-index:5;">
+    <span style="font-size:11px;font-weight:700;color:#2dd4bf;letter-spacing:2px;">10 · DOMAIN AUDIT</span>
+    <span style="font-size:11px;font-weight:500;color:#64748b;">PT Aegisindo Mitra Sejati</span>
+  </div>
+  <div style="position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,#0d9488,#2dd4bf);z-index:6;"></div>
+
+  <div style="position:relative;z-index:4;padding:76px 56px 32px 56px;height:100%;box-sizing:border-box;display:flex;flex-direction:column;">
+    <h1 style="font-size:28px;font-weight:900;color:#0f1b2d;margin:0 0 4px 0;">5 Domain Audit — APO + BAI + DSS</h1>
+    <div style="width:56px;height:4px;background:#0d9488;border-radius:2px;margin-bottom:10px;"></div>
+    <p style="font-size:13px;color:#64748b;margin:0 0 14px 0;">Dipilih berdasarkan profil bisnis multi-saluran & ketergantungan tinggi pada infrastruktur TI.</p>
+
+    <div style="flex:1;display:flex;flex-direction:column;gap:0;">
+      <div style="display:flex;align-items:center;padding:14px 0;border-bottom:1px solid #e2e8f0;">
+        <div style="width:40px;height:40px;background:#0d9488;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><iconify-icon icon="lucide:database" width="20" height="20" style="color:white;"></iconify-icon></div>
+        <div style="margin-left:16px;flex:1;"><div style="font-size:16px;font-weight:800;color:#0d9488;">APO14 <span style="color:#0f1b2d;">— Managed Data</span></div><div style="font-size:12px;color:#64748b;margin-top:2px;">Pengelolaan data inventori, pelanggan, & penjualan antar saluran</div></div>
+        <div style="font-size:11px;font-weight:700;color:#64748b;">Level 1 · GAP 2</div>
+      </div>
+      <div style="display:flex;align-items:center;padding:14px 0;border-bottom:1px solid #e2e8f0;">
+        <div style="width:40px;height:40px;background:#0d9488;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><iconify-icon icon="lucide:package" width="20" height="20" style="color:white;"></iconify-icon></div>
+        <div style="margin-left:16px;flex:1;"><div style="font-size:16px;font-weight:800;color:#0d9488;">BAI09 <span style="color:#0f1b2d;">— Managed Assets</span></div><div style="font-size:12px;color:#64748b;margin-top:2px;">Pencatatan persediaan, arus barang, stock opname</div></div>
+        <div style="font-size:11px;font-weight:700;color:#64748b;">Level 2 · GAP 1</div>
+      </div>
+      <div style="display:flex;align-items:center;padding:14px 0;border-bottom:1px solid #e2e8f0;">
+        <div style="width:40px;height:40px;background:#f59e0b;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><iconify-icon icon="lucide:server" width="20" height="20" style="color:white;"></iconify-icon></div>
+        <div style="margin-left:16px;flex:1;"><div style="font-size:16px;font-weight:800;color:#f59e0b;">DSS01 <span style="color:#0f1b2d;">— Managed Operations</span></div><div style="font-size:12px;color:#64748b;margin-top:2px;">Pemenuhan pesanan, pemantauan kinerja operasional harian</div></div>
+        <div style="font-size:11px;font-weight:700;color:#10b981;">Level 2 · GAP 2 · ★ Tertinggi</div>
+      </div>
+      <div style="display:flex;align-items:center;padding:14px 0;border-bottom:1px solid #e2e8f0;">
+        <div style="width:40px;height:40px;background:#ef4444;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><iconify-icon icon="lucide:shield-alert" width="20" height="20" style="color:white;"></iconify-icon></div>
+        <div style="margin-left:16px;flex:1;"><div style="font-size:16px;font-weight:800;color:#ef4444;">DSS04 <span style="color:#0f1b2d;">— Managed Continuity</span></div><div style="font-size:12px;color:#64748b;margin-top:2px;">Keberlangsungan layanan, backup, BCP/DRP</div></div>
+        <div style="font-size:11px;font-weight:700;color:#ef4444;">Level 1 · GAP 2 · ⚠ Terendah</div>
+      </div>
+      <div style="display:flex;align-items:center;padding:14px 0;">
+        <div style="width:40px;height:40px;background:#0d9488;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><iconify-icon icon="lucide:lock" width="20" height="20" style="color:white;"></iconify-icon></div>
+        <div style="margin-left:16px;flex:1;"><div style="font-size:16px;font-weight:800;color:#0d9488;">DSS05 <span style="color:#0f1b2d;">— Managed Security Services</span></div><div style="font-size:12px;color:#64748b;margin-top:2px;">Antimalware, hak akses, perlindungan kata sandi</div></div>
+        <div style="font-size:11px;font-weight:700;color:#64748b;">Level 2 · GAP 1</div>
+      </div>
+    </div>
+
+    <div style="margin-top:12px;display:flex;gap:16px;">
+      <div style="flex:1;padding:10px 16px;background:#f0fdfa;display:flex;align-items:center;gap:8px;"><iconify-icon icon="lucide:compass" width="16" height="16" style="color:#0d9488;"></iconify-icon><span style="font-size:12px;color:#334155;"><strong>APO</strong> — Align, Plan & Organize</span></div>
+      <div style="flex:1;padding:10px 16px;background:#fffbeb;display:flex;align-items:center;gap:8px;"><iconify-icon icon="lucide:cog" width="16" height="16" style="color:#f59e0b;"></iconify-icon><span style="font-size:12px;color:#334155;"><strong>BAI</strong> — Build, Acquire & Implement · <strong>DSS</strong> — Deliver, Service & Support</span></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SLIDE 11 — RACI MATRIX
+     ══════════════════════════════════════════════════════════ -->
+<div class="slide" id="slide-raci">
+  <div style="position:absolute;inset:0;background:#fff;"></div>
+  <div style="position:absolute;top:0;left:0;right:0;height:52px;background:#0f1b2d;display:flex;align-items:center;justify-content:space-between;padding:0 48px;z-index:5;">
+    <span style="font-size:11px;font-weight:700;color:#2dd4bf;letter-spacing:2px;">11 · RACI MATRIX</span>
+    <span style="font-size:11px;font-weight:500;color:#64748b;">PT Aegisindo Mitra Sejati</span>
+  </div>
+  <div style="position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,#0d9488,#2dd4bf);z-index:6;"></div>
+
+  <div style="position:relative;z-index:4;padding:76px 56px 32px 56px;height:100%;box-sizing:border-box;display:flex;flex-direction:column;">
+    <h1 style="font-size:28px;font-weight:900;color:#0f1b2d;margin:0 0 4px 0;">RACI Matrix — 5 Aktivitas × 6 Pihak</h1>
+    <div style="width:56px;height:4px;background:#0d9488;border-radius:2px;margin-bottom:10px;"></div>
+    <p style="font-size:13px;color:#64748b;margin:0 0 14px 0;">Identifikasi peran & tanggung jawab setiap pihak per domain audit.</p>
+
+    <div style="flex:1;overflow:auto;">
+      <table style="width:100%;border-collapse:collapse;font-size:12px;">
+        <thead>
+          <tr style="border-bottom:2px solid #0f1b2d;">
+            <th style="text-align:left;padding:10px 8px;font-weight:700;color:#0f1b2d;font-size:11px;">Aktivitas</th>
+            <th style="text-align:center;padding:10px 4px;font-size:10px;font-weight:700;color:#0d9488;">Manajer Op.</th>
+            <th style="text-align:center;padding:10px 4px;font-size:10px;font-weight:700;color:#0d9488;">Proc. & Gudang</th>
+            <th style="text-align:center;padding:10px 4px;font-size:10px;font-weight:700;color:#0d9488;">Penjualan Online</th>
+            <th style="text-align:center;padding:10px 4px;font-size:10px;font-weight:700;color:#0d9488;">IT / Admin</th>
+            <th style="text-align:center;padding:10px 4px;font-size:10px;font-weight:700;color:#0d9488;">Keuangan</th>
+            <th style="text-align:center;padding:10px 4px;font-size:10px;font-weight:700;color:#0d9488;">Cust. Service</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid #e2e8f0;">
+            <td style="padding:10px 8px;font-weight:600;color:#334155;">Pengelolaan Data <span style="color:#0d9488;font-weight:700;">(APO14)</span></td>
+            <td style="text-align:center;"><span style="display:inline-flex;width:28px;height:28px;border-radius:6px;align-items:center;justify-content:center;font-weight:800;font-size:12px;background:#0f1b2d;color:white;">A</span></td>
+            <td style="text-align:center;"><span style="display:inline-flex;width:28px;height:28px;border-radius:6px;align-items:center;justify-content:center;font-weight:800;font-size:12px;background:#0d9488;color:white;">R</span></td>
+            <td style="text-align:center;"><span style="display:inline-flex;width:28px;height:28px;border-radius:6px;align-items:center;justify-content:center;font-weight:800;font-size:12px;background:#0d9488;color:white;">R</span></td>
+            <td style="text-align:center;"><span style="display:inline-flex;width:28px;height:28px;border-radius:6px;align-items:center;justify-content:center;font-weight:800;font-size:12px;background:#0d9488;color:white;">R</span></td>
+            <td style="text-align:center;"><span style="display:inline-flex;width:28px;height:28px;border-radius:6px;align-items:center;justify-content:center;font-weight:800;font-size:12px;background:#f59e0b;color:white;">C</span></td>
+            <td style="text-align:center;"><span style="display:inline-flex;width:28px;height:28px;border-radius:6px;align-items:center;justify-content:center;font-weight:800;font-size:12px;background:#cbd5e1;color:#475569;">I</span></td>
+          </tr>
+          <tr style="border-bottom:1px solid #e2e8f0;">
+            <td style="padding:10px 8px;font-weight:600;color:#334155;">Pengelolaan Aset <span style="color:#0d9488;font-weight:700;">(BAI09)</span></td>
+            <td style="text-align:center;"><span style="display:inline-flex;width:28px;height:28px;border-radius:6px;align-items:center;justify-content:center;font-weight:800;font-size:12px;background:#0f1b2d;color:white;">A</span></td>
+            <td style="text-align:center;"><span style="display:inline-flex;width:28px;height:28px;border-radius:6px;align-items:center;justify-content:center;font-weight:800;font-size:12px;background:#0d9488;color:white;">R</span></td>
+            <td style="text-align:center;"><span style="display:inline-flex;width:28px;height:28px;border-radius:6px;align-items:center;justify-content:center;font-weight:800;font-size:12px;background:#f59e0b;color:white;">C</span></td>
+            <td style="text-align:center;"><span style="display:inline-flex;width:28px;height:28px;border-radius:6px;align-items:center;justify-content:center;font-weight:800;font-size:12px;background:#0d9488;color:white;">R</span></td>
+            <td style="text-align:center;"><span style="display:inline-flex;width:28px;height:28px;border-radius:6px;align-items:center;justify-content:center;font-weight:800;font-size:12px;background:#cbd5e1;color:#475569;">I</span></td>
+            <td style="text-align:center;"><span style="display:inline-flex;width:28px;height:28px;border-radius:6px;align-items:center;justify-content:center;font-weight:800;font-size:12px;background:#cbd5e1;color:#475569;">I</span></td>
+          </tr>
+          <tr style="border-bottom:1px solid #e2e8f0;">
+            <td style="padding:10px 8px;font-weight:600;color:#334155;">Operasional Harian <span style="color:#f59e0b;font-weight:700;">(DSS01)</span></td>
+            <td style="text-align:center;"><span style="display:inline-flex;width:28px;height:28px;border-radius:6px;align-items:center;justify-content:center;font-weight:800;font-size:12px;background:#0f1b2d;color:white;">A</span></td>
+            <td style="text-align:center;"><span style="display:inline-flex;width:28px;height:28px;border-radius:6px;align-items:center;justify-content:center;font-weight:800;font-size:12px;background:#0d9488;color:white;">R</span></td>
+            <td style="text-align:center;"><span style="display:inline-flex;width:28px;height:28px;border-radius:6px;align-items:center;justify-content:center;font-weight:800;font-size:12px;background:#0d9488;color:white;">R</span></td>
+            <td style="text-align:center;"><span style="display:inline-flex;width:28px;height:28px;border-radius:6px;align-items:center;justify-content:center;font-weight:800;font-size:12px;background:#f59e0b;color:white;">C</span></td>
+            <td style="text-align:center;"><span style="display:inline-flex;width:28px;height:28px;border-radius:6px;align-items:center;justify-content:center;font-weight:800;font-size:12px;background:#cbd5e1;color:#475569;">I</span></td>
+            <td style="text-align:center;"><span style="display:inline-flex;width:28px;height:28px;border-radius:6px;align-items:center;justify-content:center;font-weight:800;font-size:12px;background:#0d9488;color:white;">R</span></td>
+          </tr>
+          <tr style="border-bottom:1px solid #e2e8f0;">
+            <td style="padding:10px 8px;font-weight:600;color:#334155;">Keberlangsungan <span style="color:#ef4444;font-weight:700;">(DSS04)</span></td>
+            <td style="text-align:center;"><span style="display:inline-flex;width:28px;height:28px;border-radius:6px;align-items:center;justify-content:center;font-weight:800;font-size:12px;background:#0f1b2d;color:white;">A</span></td>
+            <td style="text-align:center;"><span style="display:inline-flex;width:28px;height:28px;border-radius:6px;align-items:center;justify-content:center;font-weight:800;font-size:12px;background:#f59e0b;color:white;">C</span></td>
+            <td style="text-align:center;"><span style="display:inline-flex;width:28px;height:28px;border-radius:6px;align-items:center;justify-content:center;font-weight:800;font-size:12px;background:#cbd5e1;color:#475569;">I</span></td>
+            <td style="text-align:center;"><span style="display:inline-flex;width:28px;height:28px;border-radius:6px;align-items:center;justify-content:center;font-weight:800;font-size:12px;background:#0d9488;color:white;">R</span></td>
+            <td style="text-align:center;"><span style="display:inline-flex;width:28px;height:28px;border-radius:6px;align-items:center;justify-content:center;font-weight:800;font-size:12px;background:#f59e0b;color:white;">C</span></td>
+            <td style="text-align:center;"><span style="display:inline-flex;width:28px;height:28px;border-radius:6px;align-items:center;justify-content:center;font-weight:800;font-size:12px;background:#cbd5e1;color:#475569;">I</span></td>
+          </tr>
+          <tr>
+            <td style="padding:10px 8px;font-weight:600;color:#334155;">Layanan Keamanan <span style="color:#0d9488;font-weight:700;">(DSS05)</span></td>
+            <td style="text-align:center;"><span style="display:inline-flex;width:28px;height:28px;border-radius:6px;align-items:center;justify-content:center;font-weight:800;font-size:12px;background:#0f1b2d;color:white;">A</span></td>
+            <td style="text-align:center;"><span style="display:inline-flex;width:28px;height:28px;border-radius:6px;align-items:center;justify-content:center;font-weight:800;font-size:12px;background:#cbd5e1;color:#475569;">I</span></td>
+            <td style="text-align:center;"><span style="display:inline-flex;width:28px;height:28px;border-radius:6px;align-items:center;justify-content:center;font-weight:800;font-size:12px;background:#f59e0b;color:white;">C</span></td>
+            <td style="text-align:center;"><span style="display:inline-flex;width:28px;height:28px;border-radius:6px;align-items:center;justify-content:center;font-weight:800;font-size:12px;background:#0d9488;color:white;">R</span></td>
+            <td style="text-align:center;"><span style="display:inline-flex;width:28px;height:28px;border-radius:6px;align-items:center;justify-content:center;font-weight:800;font-size:12px;background:#f59e0b;color:white;">C</span></td>
+            <td style="text-align:center;"><span style="display:inline-flex;width:28px;height:28px;border-radius:6px;align-items:center;justify-content:center;font-weight:800;font-size:12px;background:#cbd5e1;color:#475569;">I</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div style="margin-top:12px;display:flex;gap:12px;">
+      <div style="display:flex;align-items:center;gap:6px;"><span style="display:inline-flex;width:22px;height:22px;border-radius:4px;align-items:center;justify-content:center;font-weight:800;font-size:10px;background:#0d9488;color:white;">R</span><span style="font-size:11px;color:#334155;">Responsible</span></div>
+      <div style="display:flex;align-items:center;gap:6px;"><span style="display:inline-flex;width:22px;height:22px;border-radius:4px;align-items:center;justify-content:center;font-weight:800;font-size:10px;background:#0f1b2d;color:white;">A</span><span style="font-size:11px;color:#334155;">Accountable</span></div>
+      <div style="display:flex;align-items:center;gap:6px;"><span style="display:inline-flex;width:22px;height:22px;border-radius:4px;align-items:center;justify-content:center;font-weight:800;font-size:10px;background:#f59e0b;color:white;">C</span><span style="font-size:11px;color:#334155;">Consulted</span></div>
+      <div style="display:flex;align-items:center;gap:6px;"><span style="display:inline-flex;width:22px;height:22px;border-radius:4px;align-items:center;justify-content:center;font-weight:800;font-size:10px;background:#cbd5e1;color:#475569;">I</span><span style="font-size:11px;color:#334155;">Informed</span></div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SLIDE 12 — METODOLOGI (CHART EMBED)
+     ══════════════════════════════════════════════════════════ -->
+<div class="slide" id="slide-metodologi">
+  <div style="position:absolute;inset:0;background:#fff;"></div>
+  <div style="position:absolute;top:0;left:0;right:0;height:52px;background:#0f1b2d;display:flex;align-items:center;justify-content:space-between;padding:0 48px;z-index:5;">
+    <span style="font-size:11px;font-weight:700;color:#2dd4bf;letter-spacing:2px;">12 · METODOLOGI</span>
+    <span style="font-size:11px;font-weight:500;color:#64748b;">PT Aegisindo Mitra Sejati</span>
+  </div>
+  <div style="position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,#0d9488,#2dd4bf);z-index:6;"></div>
+
+  <div style="position:relative;z-index:4;padding:76px 56px 32px 56px;height:100%;box-sizing:border-box;display:flex;flex-direction:column;">
+    <h1 style="font-size:28px;font-weight:900;color:#0f1b2d;margin:0 0 4px 0;">Metodologi Perhitungan Capability Level</h1>
+    <div style="width:56px;height:4px;background:#0d9488;border-radius:2px;margin-bottom:10px;"></div>
+    <p style="font-size:13px;color:#64748b;margin:0 0 12px 0;">7 langkah dari penyusunan kuesioner hingga GAP analysis — pipeline visual berikut:</p>
+    <div style="flex:1;display:flex;align-items:center;justify-content:center;min-height:0;">
+      <img src="../03_Data/charts/gambar_4_metodologi.png" alt="Metodologi Audit" style="max-width:100%;max-height:100%;object-fit:contain;border-radius:6px;border:1px solid #e2e8f0;">
+    </div>
+    <div style="margin-top:12px;display:flex;gap:16px;">
+      <div style="flex:1;padding:10px 16px;background:#f0fdfa;display:flex;align-items:center;gap:8px;"><iconify-icon icon="lucide:calculator" width="16" height="16" style="color:#0d9488;"></iconify-icon><span style="font-size:12px;color:#334155;"><strong>Formula:</strong> % Ketercapaian = (Mean ÷ Skor Maks) × 100%</span></div>
+      <div style="flex:1;padding:10px 16px;background:#fffbeb;display:flex;align-items:center;gap:8px;"><iconify-icon icon="lucide:clipboard-list" width="16" height="16" style="color:#f59e0b;"></iconify-icon><span style="font-size:12px;color:#334155;">9 pertanyaan/domain (3 level × 3 pertanyaan) × 5 domain = <strong>45 pertanyaan</strong></span></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SLIDE 13 — HASIL CAPABILITY LEVEL
+     ══════════════════════════════════════════════════════════ -->
+<div class="slide" id="slide-hasil">
+  <div style="position:absolute;inset:0;background:#fff;"></div>
+  <div style="position:absolute;top:0;left:0;right:0;height:52px;background:#0f1b2d;display:flex;align-items:center;justify-content:space-between;padding:0 48px;z-index:5;">
+    <span style="font-size:11px;font-weight:700;color:#2dd4bf;letter-spacing:2px;">13 · HASIL AUDIT</span>
+    <span style="font-size:11px;font-weight:500;color:#64748b;">PT Aegisindo Mitra Sejati</span>
+  </div>
+  <div style="position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,#0d9488,#2dd4bf);z-index:6;"></div>
+
+  <div style="position:relative;z-index:4;padding:76px 56px 32px 56px;height:100%;box-sizing:border-box;display:flex;flex-direction:column;">
+    <h1 style="font-size:26px;font-weight:900;color:#0f1b2d;margin:0 0 4px 0;">Capability Level — Hasil Perhitungan 5 Domain</h1>
+    <div style="width:56px;height:4px;background:#0d9488;border-radius:2px;margin-bottom:8px;"></div>
+    <p style="font-size:12px;color:#64748b;margin:0 0 12px 0;">Persentase ketercapaian per level. Capability Level = level tertinggi dengan rating <strong style="color:#0d9488;">L</strong> secara berurutan.</p>
+
+    <div style="flex:1;overflow:auto;">
+      <table style="width:100%;border-collapse:collapse;font-size:12px;">
+        <thead>
+          <tr style="border-bottom:2px solid #0f1b2d;">
+            <th style="text-align:left;padding:8px;font-weight:700;color:#0f1b2d;">Domain</th>
+            <th style="text-align:center;padding:8px;font-weight:700;color:#0d9488;">Level 1</th>
+            <th style="text-align:center;padding:8px;font-weight:700;color:#0d9488;">Level 2</th>
+            <th style="text-align:center;padding:8px;font-weight:700;color:#0d9488;">Level 3</th>
+            <th style="text-align:center;padding:8px;font-weight:700;color:#0f1b2d;">Capability Level</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid #e2e8f0;">
+            <td style="padding:10px 8px;"><strong style="color:#0d9488;">APO14</strong> <span style="color:#64748b;">Managed Data</span></td>
+            <td style="text-align:center;padding:8px;"><div style="display:inline-block;padding:4px 10px;background:#0d9488;color:white;font-weight:700;border-radius:4px;">60.00% L</div></td>
+            <td style="text-align:center;padding:8px;"><div style="display:inline-block;padding:4px 10px;background:#f59e0b;color:white;font-weight:700;border-radius:4px;">45.56% P</div></td>
+            <td style="text-align:center;padding:8px;"><div style="display:inline-block;padding:4px 10px;background:#f59e0b;color:white;font-weight:700;border-radius:4px;">35.56% P</div></td>
+            <td style="text-align:center;padding:8px;"><div style="display:inline-block;padding:4px 14px;background:#ef4444;color:white;font-weight:800;border-radius:4px;">Level 1</div></td>
+          </tr>
+          <tr style="border-bottom:1px solid #e2e8f0;">
+            <td style="padding:10px 8px;"><strong style="color:#0d9488;">BAI09</strong> <span style="color:#64748b;">Managed Assets</span></td>
+            <td style="text-align:center;padding:8px;"><div style="display:inline-block;padding:4px 10px;background:#0d9488;color:white;font-weight:700;border-radius:4px;">67.78% L</div></td>
+            <td style="text-align:center;padding:8px;"><div style="display:inline-block;padding:4px 10px;background:#0d9488;color:white;font-weight:700;border-radius:4px;">53.33% L</div></td>
+            <td style="text-align:center;padding:8px;"><div style="display:inline-block;padding:4px 10px;background:#f59e0b;color:white;font-weight:700;border-radius:4px;">43.33% P</div></td>
+            <td style="text-align:center;padding:8px;"><div style="display:inline-block;padding:4px 14px;background:#f59e0b;color:white;font-weight:800;border-radius:4px;">Level 2</div></td>
+          </tr>
+          <tr style="border-bottom:1px solid #e2e8f0;">
+            <td style="padding:10px 8px;"><strong style="color:#f59e0b;">DSS01</strong> <span style="color:#64748b;">Managed Ops</span> <span style="font-size:10px;color:#10b981;font-weight:700;">★ TERTINGGI</span></td>
+            <td style="text-align:center;padding:8px;"><div style="display:inline-block;padding:4px 10px;background:#10b981;color:white;font-weight:700;border-radius:4px;">70.00% L</div></td>
+            <td style="text-align:center;padding:8px;"><div style="display:inline-block;padding:4px 10px;background:#0d9488;color:white;font-weight:700;border-radius:4px;">56.67% L</div></td>
+            <td style="text-align:center;padding:8px;"><div style="display:inline-block;padding:4px 10px;background:#f59e0b;color:white;font-weight:700;border-radius:4px;">46.67% P</div></td>
+            <td style="text-align:center;padding:8px;"><div style="display:inline-block;padding:4px 14px;background:#f59e0b;color:white;font-weight:800;border-radius:4px;">Level 2</div></td>
+          </tr>
+          <tr style="border-bottom:1px solid #e2e8f0;">
+            <td style="padding:10px 8px;"><strong style="color:#ef4444;">DSS04</strong> <span style="color:#64748b;">Managed Cont.</span> <span style="font-size:10px;color:#ef4444;font-weight:700;">⚠ TERENDAH</span></td>
+            <td style="text-align:center;padding:8px;"><div style="display:inline-block;padding:4px 10px;background:#0d9488;color:white;font-weight:700;border-radius:4px;">57.78% L</div></td>
+            <td style="text-align:center;padding:8px;"><div style="display:inline-block;padding:4px 10px;background:#f59e0b;color:white;font-weight:700;border-radius:4px;">43.33% P</div></td>
+            <td style="text-align:center;padding:8px;"><div style="display:inline-block;padding:4px 10px;background:#f59e0b;color:white;font-weight:700;border-radius:4px;">33.33% P</div></td>
+            <td style="text-align:center;padding:8px;"><div style="display:inline-block;padding:4px 14px;background:#ef4444;color:white;font-weight:800;border-radius:4px;">Level 1</div></td>
+          </tr>
+          <tr>
+            <td style="padding:10px 8px;"><strong style="color:#0d9488;">DSS05</strong> <span style="color:#64748b;">Managed Sec.</span></td>
+            <td style="text-align:center;padding:8px;"><div style="display:inline-block;padding:4px 10px;background:#0d9488;color:white;font-weight:700;border-radius:4px;">65.56% L</div></td>
+            <td style="text-align:center;padding:8px;"><div style="display:inline-block;padding:4px 10px;background:#0d9488;color:white;font-weight:700;border-radius:4px;">52.22% L</div></td>
+            <td style="text-align:center;padding:8px;"><div style="display:inline-block;padding:4px 10px;background:#f59e0b;color:white;font-weight:700;border-radius:4px;">41.11% P</div></td>
+            <td style="text-align:center;padding:8px;"><div style="display:inline-block;padding:4px 14px;background:#f59e0b;color:white;font-weight:800;border-radius:4px;">Level 2</div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div style="margin-top:10px;display:flex;gap:12px;">
+      <div style="flex:1;padding:8px 14px;background:#f0fdfa;display:flex;align-items:center;gap:8px;"><iconify-icon icon="lucide:circle-dot" width="16" height="16" style="color:#0d9488;"></iconify-icon><span style="font-size:11px;color:#334155;"><strong>Rata-rata CL: 1.6 / 5.0</strong></span></div>
+      <div style="flex:1;padding:8px 14px;background:#fffbeb;display:flex;align-items:center;gap:8px;"><iconify-icon icon="lucide:trending-up" width="16" height="16" style="color:#f59e0b;"></iconify-icon><span style="font-size:11px;color:#334155;"><strong>GAP rata-rata: 1.6 level</strong></span></div>
+      <div style="flex:1;padding:8px 14px;background:#f0fdfa;display:flex;align-items:center;gap:8px;"><iconify-icon icon="lucide:trophy" width="16" height="16" style="color:#0d9488;"></iconify-icon><span style="font-size:11px;color:#334155;"><strong>DSS01</strong> — skor L1 tertinggi (70%)</span></div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SLIDE 14 — GAP ANALYSIS (CHART + TABLE)
+     ══════════════════════════════════════════════════════════ -->
+<div class="slide" id="slide-gap">
+  <div style="position:absolute;inset:0;background:#fff;"></div>
+  <div style="position:absolute;top:0;left:0;right:0;height:52px;background:#0f1b2d;display:flex;align-items:center;justify-content:space-between;padding:0 48px;z-index:5;">
+    <span style="font-size:11px;font-weight:700;color:#2dd4bf;letter-spacing:2px;">14 · GAP ANALYSIS</span>
+    <span style="font-size:11px;font-weight:500;color:#64748b;">PT Aegisindo Mitra Sejati</span>
+  </div>
+  <div style="position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,#0d9488,#2dd4bf);z-index:6;"></div>
+
+  <div style="position:relative;z-index:4;padding:76px 56px 32px 56px;height:100%;box-sizing:border-box;display:flex;flex-direction:column;">
+    <h1 style="font-size:28px;font-weight:900;color:#0f1b2d;margin:0 0 4px 0;">GAP Analysis — As-is vs To-be</h1>
+    <div style="width:56px;height:4px;background:#0d9488;border-radius:2px;margin-bottom:10px;"></div>
+
+    <div style="display:flex;gap:20px;flex:1;min-height:0;">
+      <!-- LEFT: Table -->
+      <div style="flex:1;">
+        <table style="width:100%;border-collapse:collapse;font-size:12px;">
+          <thead>
+            <tr style="border-bottom:2px solid #0f1b2d;">
+              <th style="text-align:left;padding:8px;font-weight:700;">Domain</th>
+              <th style="text-align:center;padding:8px;font-weight:700;color:#0d9488;">As-is</th>
+              <th style="text-align:center;padding:8px;font-weight:700;color:#f59e0b;">To-be</th>
+              <th style="text-align:center;padding:8px;font-weight:700;color:#ef4444;">GAP</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid #e2e8f0;"><td style="padding:8px;"><strong>APO14</strong> Data</td><td style="text-align:center;font-weight:700;">L1</td><td style="text-align:center;font-weight:700;color:#0d9488;">L3</td><td style="text-align:center;"><span style="padding:2px 10px;background:#fef2f2;color:#ef4444;font-weight:800;border-radius:4px;">2</span></td></tr>
+            <tr style="border-bottom:1px solid #e2e8f0;"><td style="padding:8px;"><strong>BAI09</strong> Assets</td><td style="text-align:center;font-weight:700;">L2</td><td style="text-align:center;font-weight:700;color:#0d9488;">L3</td><td style="text-align:center;"><span style="padding:2px 10px;background:#fffbeb;color:#f59e0b;font-weight:800;border-radius:4px;">1</span></td></tr>
+            <tr style="border-bottom:1px solid #e2e8f0;"><td style="padding:8px;"><strong>DSS01</strong> Ops</td><td style="text-align:center;font-weight:700;">L2</td><td style="text-align:center;font-weight:700;color:#0d9488;">L4</td><td style="text-align:center;"><span style="padding:2px 10px;background:#fef2f2;color:#ef4444;font-weight:800;border-radius:4px;">2</span></td></tr>
+            <tr style="border-bottom:1px solid #e2e8f0;"><td style="padding:8px;"><strong>DSS04</strong> Cont.</td><td style="text-align:center;font-weight:700;">L1</td><td style="text-align:center;font-weight:700;color:#0d9488;">L3</td><td style="text-align:center;"><span style="padding:2px 10px;background:#fef2f2;color:#ef4444;font-weight:800;border-radius:4px;">2</span></td></tr>
+            <tr><td style="padding:8px;"><strong>DSS05</strong> Sec.</td><td style="text-align:center;font-weight:700;">L2</td><td style="text-align:center;font-weight:700;color:#0d9488;">L3</td><td style="text-align:center;"><span style="padding:2px 10px;background:#fffbeb;color:#f59e0b;font-weight:800;border-radius:4px;">1</span></td></tr>
+          </tbody>
+        </table>
+        <div style="margin-top:12px;padding:10px 14px;background:#0f1b2d;display:flex;align-items:center;gap:10px;">
+          <iconify-icon icon="lucide:info" width="16" height="16" style="color:#2dd4bf;"></iconify-icon>
+          <span style="font-size:12px;color:#94a3b8;"><strong style="color:white;">Rata-rata:</strong> As-is <strong style="color:#2dd4bf;">1.6</strong> · To-be <strong style="color:#f59e0b;">3.2</strong> · GAP <strong style="color:#ef4444;">1.6</strong></span>
+        </div>
+      </div>
+      <!-- RIGHT: Chart image -->
+      <div style="flex:1;display:flex;align-items:flex-start;justify-content:center;padding-top:0;">
+        <img src="../03_Data/charts/gambar_2_gap_analysis.png" alt="GAP Analysis Chart" style="max-width:100%;max-height:100%;object-fit:contain;border-radius:6px;border:1px solid #e2e8f0;">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SLIDE 15 — 5 TEMUAN UTAMA
+     ══════════════════════════════════════════════════════════ -->
+<div class="slide" id="slide-temuan">
+  <div style="position:absolute;inset:0;background:#fff;"></div>
+  <div style="position:absolute;top:0;left:0;right:0;height:52px;background:#0f1b2d;display:flex;align-items:center;justify-content:space-between;padding:0 48px;z-index:5;">
+    <span style="font-size:11px;font-weight:700;color:#2dd4bf;letter-spacing:2px;">15 · TEMUAN UTAMA</span>
+    <span style="font-size:11px;font-weight:500;color:#64748b;">PT Aegisindo Mitra Sejati</span>
+  </div>
+  <div style="position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,#0d9488,#2dd4bf);z-index:6;"></div>
+
+  <div style="position:relative;z-index:4;padding:76px 56px 32px 56px;height:100%;box-sizing:border-box;display:flex;flex-direction:column;">
+    <h1 style="font-size:28px;font-weight:900;color:#0f1b2d;margin:0 0 4px 0;">5 Temuan Utama Audit</h1>
+    <div style="width:56px;height:4px;background:#0d9488;border-radius:2px;margin-bottom:8px;"></div>
+    <p style="font-size:12px;color:#64748b;margin:0 0 12px 0;">Pola umum: <strong>aktivitas dasar berjalan</strong>, namun standardisasi & dokumentasi formal belum optimal.</p>
+
+    <div style="flex:1;display:flex;flex-direction:column;gap:0;">
+      <div style="display:flex;align-items:flex-start;gap:14px;padding:12px 0;border-bottom:1px solid #e2e8f0;">
+        <div style="width:36px;height:36px;background:#0d9488;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><iconify-icon icon="lucide:database" width="18" height="18" style="color:white;"></iconify-icon></div>
+        <div><div style="font-size:14px;font-weight:700;color:#0d9488;">APO14 <span style="color:#0f1b2d;">— Managed Data</span></div>
+        <div style="font-size:12px;color:#475569;margin-top:3px;line-height:1.5;">Data tersebar di spreadsheet, WhatsApp, & marketplace tanpa integrasi. <strong>Belum ada data owner & master data terpusat.</strong></div></div>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:14px;padding:12px 0;border-bottom:1px solid #e2e8f0;">
+        <div style="width:36px;height:36px;background:#0d9488;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><iconify-icon icon="lucide:package" width="18" height="18" style="color:white;"></iconify-icon></div>
+        <div><div style="font-size:14px;font-weight:700;color:#0d9488;">BAI09 <span style="color:#0f1b2d;">— Managed Assets</span></div>
+        <div style="font-size:12px;color:#475569;margin-top:3px;line-height:1.5;">Pencatatan stok berjalan baik, namun <strong>integrasi stok antar gudang–toko–marketplace & dokumentasi siklus hidup aset</strong> belum ada.</div></div>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:14px;padding:12px 0;border-bottom:1px solid #e2e8f0;">
+        <div style="width:36px;height:36px;background:#f59e0b;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><iconify-icon icon="lucide:server" width="18" height="18" style="color:white;"></iconify-icon></div>
+        <div><div style="font-size:14px;font-weight:700;color:#f59e0b;">DSS01 <span style="color:#0f1b2d;">— Managed Operations</span></div>
+        <div style="font-size:12px;color:#475569;margin-top:3px;line-height:1.5;">Skor L1 tertinggi (70%), tapi <strong>SOP operasional belum terdokumentasi & mekanisme umpan balik pelanggan</strong> belum terstruktur.</div></div>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:14px;padding:12px 0;border-bottom:1px solid #e2e8f0;">
+        <div style="width:36px;height:36px;background:#ef4444;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><iconify-icon icon="lucide:shield-alert" width="18" height="18" style="color:white;"></iconify-icon></div>
+        <div><div style="font-size:14px;font-weight:700;color:#ef4444;">DSS04 <span style="color:#0f1b2d;">— Managed Continuity</span></div>
+        <div style="font-size:12px;color:#475569;margin-top:3px;line-height:1.5;">Backup sederhana ada tapi belum terjadwal. <strong>Belum ada BCP/DRP formal, uji pemulihan, target RTO/RPO.</strong></div></div>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:14px;padding:12px 0;">
+        <div style="width:36px;height:36px;background:#0d9488;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><iconify-icon icon="lucide:lock" width="18" height="18" style="color:white;"></iconify-icon></div>
+        <div><div style="font-size:14px;font-weight:700;color:#0d9488;">DSS05 <span style="color:#0f1b2d;">— Managed Security</span></div>
+        <div style="font-size:12px;color:#475569;margin-top:3px;line-height:1.5;">Antivirus & hak akses sudah berjalan, namun <strong>prosedur keamanan belum terdokumentasi & tinjauan berkala belum dilakukan.</strong></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SLIDE 16 — SOROTAN TERKUAT & TERLEMAH
+     ══════════════════════════════════════════════════════════ -->
+<div class="slide" id="slide-sorotan">
+  <div style="position:absolute;inset:0;background:#fff;"></div>
+  <div style="position:absolute;top:0;left:0;right:0;height:52px;background:#0f1b2d;display:flex;align-items:center;justify-content:space-between;padding:0 48px;z-index:5;">
+    <span style="font-size:11px;font-weight:700;color:#2dd4bf;letter-spacing:2px;">16 · SOROTAN</span>
+    <span style="font-size:11px;font-weight:500;color:#64748b;">PT Aegisindo Mitra Sejati</span>
+  </div>
+  <div style="position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,#0d9488,#2dd4bf);z-index:6;"></div>
+
+  <div style="position:relative;z-index:4;padding:76px 56px 32px 56px;height:100%;box-sizing:border-box;display:flex;flex-direction:column;">
+    <h1 style="font-size:28px;font-weight:900;color:#0f1b2d;margin:0 0 4px 0;">Sorotan — Domain Terkuat & Terlemah</h1>
+    <div style="width:56px;height:4px;background:#0d9488;border-radius:2px;margin-bottom:16px;"></div>
+
+    <div style="display:flex;gap:0;flex:1;min-height:0;">
+      <!-- LEFT: Terkuat -->
+      <div style="flex:1;display:flex;flex-direction:column;">
+        <div style="height:6px;background:#10b981;"></div>
+        <div style="background:#f0fdf4;padding:20px;flex:1;border-right:1px solid #e2e8f0;">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
+            <iconify-icon icon="lucide:trophy" width="22" height="22" style="color:#10b981;"></iconify-icon>
+            <div style="font-size:16px;font-weight:800;color:#0f1b2d;">Domain Terkuat</div>
+          </div>
+          <div style="padding:14px 0;border-bottom:1px solid #bbf7d0;">
+            <div style="display:flex;align-items:baseline;gap:8px;"><span style="font-size:18px;font-weight:900;color:#f59e0b;">DSS01</span><span style="font-size:28px;font-weight:900;color:#10b981;">70.00%</span></div>
+            <div style="font-size:13px;font-weight:700;color:#0f1b2d;margin-top:4px;">Managed Operations — Level 1 tertinggi</div>
+            <div style="font-size:12px;color:#475569;margin-top:4px;">Pemenuhan pesanan lintas saluran berjalan rutin, jadwal pemeliharaan konsisten.</div>
+          </div>
+          <div style="padding:14px 0;">
+            <div style="display:flex;align-items:baseline;gap:8px;"><span style="font-size:18px;font-weight:900;color:#0d9488;">BAI09</span><span style="font-size:28px;font-weight:900;color:#10b981;">67.78%</span></div>
+            <div style="font-size:13px;font-weight:700;color:#0f1b2d;margin-top:4px;">Managed Assets — Level 1 kedua</div>
+            <div style="font-size:12px;color:#475569;margin-top:4px;">Pencatatan stok & arus barang sudah menjadi inti bisnis distribusi.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Terlemah -->
+      <div style="flex:1;display:flex;flex-direction:column;">
+        <div style="height:6px;background:#ef4444;"></div>
+        <div style="background:#fef2f2;padding:20px;flex:1;">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
+            <iconify-icon icon="lucide:alert-triangle" width="22" height="22" style="color:#ef4444;"></iconify-icon>
+            <div style="font-size:16px;font-weight:800;color:#0f1b2d;">Domain Terlemah</div>
+          </div>
+          <div style="padding:14px 0;border-bottom:1px solid #fecaca;">
+            <div style="display:flex;align-items:baseline;gap:8px;"><span style="font-size:18px;font-weight:900;color:#ef4444;">DSS04</span><span style="font-size:28px;font-weight:900;color:#ef4444;">33.33%</span></div>
+            <div style="font-size:13px;font-weight:700;color:#0f1b2d;margin-top:4px;">Managed Continuity — Level 3 terendah</div>
+            <div style="font-size:12px;color:#475569;margin-top:4px;">BCP/DRP belum ada, backup belum terjadwal, ketergantungan pada pihak ketiga tinggi.</div>
+          </div>
+          <div style="padding:14px 0;">
+            <div style="display:flex;align-items:baseline;gap:8px;"><span style="font-size:18px;font-weight:900;color:#ef4444;">APO14</span><span style="font-size:28px;font-weight:900;color:#ef4444;">35.56%</span></div>
+            <div style="font-size:13px;font-weight:700;color:#0f1b2d;margin-top:4px;">Managed Data — Level 3 terendah kedua</div>
+            <div style="font-size:12px;color:#475569;margin-top:4px;">Tidak ada master data, data owner belum ditetapkan, fragmentasi data antar saluran.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SLIDE 17 — REKOMENDASI PER DOMAIN
+     ══════════════════════════════════════════════════════════ -->
+<div class="slide" id="slide-rekomendasi">
+  <div style="position:absolute;inset:0;background:#fff;"></div>
+  <div style="position:absolute;top:0;left:0;right:0;height:52px;background:#0f1b2d;display:flex;align-items:center;justify-content:space-between;padding:0 48px;z-index:5;">
+    <span style="font-size:11px;font-weight:700;color:#2dd4bf;letter-spacing:2px;">17 · REKOMENDASI</span>
+    <span style="font-size:11px;font-weight:500;color:#64748b;">PT Aegisindo Mitra Sejati</span>
+  </div>
+  <div style="position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,#0d9488,#2dd4bf);z-index:6;"></div>
+
+  <div style="position:relative;z-index:4;padding:76px 56px 32px 56px;height:100%;box-sizing:border-box;display:flex;flex-direction:column;">
+    <h1 style="font-size:26px;font-weight:900;color:#0f1b2d;margin:0 0 4px 0;">Rekomendasi Perbaikan per Domain</h1>
+    <div style="width:56px;height:4px;background:#0d9488;border-radius:2px;margin-bottom:8px;"></div>
+    <p style="font-size:12px;color:#64748b;margin:0 0 10px 0;">Target perbaikan bertahap menuju Level 3 (Established) & Level 4 (Predictable).</p>
+
+    <div style="flex:1;display:flex;flex-direction:column;gap:0;">
+      <div style="display:flex;align-items:center;padding:10px 0;border-bottom:1px solid #e2e8f0;">
+        <div style="width:60px;text-align:center;"><div style="font-size:14px;font-weight:900;color:#ef4444;">APO14</div><div style="font-size:9px;font-weight:700;color:white;background:#ef4444;border-radius:3px;padding:1px 6px;display:inline-block;margin-top:2px;">PRIO 1</div></div>
+        <div style="flex:1;margin-left:14px;display:flex;gap:20px;">
+          <div style="flex:1;"><div style="font-size:9px;font-weight:700;color:#64748b;letter-spacing:1px;margin-bottom:3px;">→ LEVEL 2–3</div><div style="font-size:11px;color:#334155;line-height:1.4;">Data owner · Master data terpusat · SOP pemutakhiran & rekonsiliasi data</div></div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;padding:10px 0;border-bottom:1px solid #e2e8f0;">
+        <div style="width:60px;text-align:center;"><div style="font-size:14px;font-weight:900;color:#ef4444;">DSS04</div><div style="font-size:9px;font-weight:700;color:white;background:#ef4444;border-radius:3px;padding:1px 6px;display:inline-block;margin-top:2px;">PRIO 1</div></div>
+        <div style="flex:1;margin-left:14px;display:flex;gap:20px;">
+          <div style="flex:1;"><div style="font-size:9px;font-weight:700;color:#64748b;letter-spacing:1px;margin-bottom:3px;">→ LEVEL 2–3</div><div style="font-size:11px;color:#334155;line-height:1.4;">Backup terjadwal · BCP/DRP formal · Uji pemulihan · Target RTO/RPO</div></div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;padding:10px 0;border-bottom:1px solid #e2e8f0;">
+        <div style="width:60px;text-align:center;"><div style="font-size:14px;font-weight:900;color:#0d9488;">BAI09</div><div style="font-size:9px;font-weight:700;color:white;background:#0d9488;border-radius:3px;padding:1px 6px;display:inline-block;margin-top:2px;">PRIO 2</div></div>
+        <div style="flex:1;margin-left:14px;"><div style="font-size:9px;font-weight:700;color:#64748b;letter-spacing:1px;margin-bottom:3px;">→ LEVEL 3</div><div style="font-size:11px;color:#334155;line-height:1.4;">Integrasi stok antar saluran · SOP persediaan (reorder point) · Dokumentasi lifecycle aset · Stock opname periodik</div></div>
+      </div>
+      <div style="display:flex;align-items:center;padding:10px 0;border-bottom:1px solid #e2e8f0;">
+        <div style="width:60px;text-align:center;"><div style="font-size:14px;font-weight:900;color:#f59e0b;">DSS01</div><div style="font-size:9px;font-weight:700;color:white;background:#f59e0b;border-radius:3px;padding:1px 6px;display:inline-block;margin-top:2px;">PRIO 3</div></div>
+        <div style="flex:1;margin-left:14px;"><div style="font-size:9px;font-weight:700;color:#64748b;letter-spacing:1px;margin-bottom:3px;">→ LEVEL 3–4</div><div style="font-size:11px;color:#334155;line-height:1.4;">SOP operasional lengkap · Pelatihan staf · Mekanisme feedback pelanggan · KPI operasional terukur</div></div>
+      </div>
+      <div style="display:flex;align-items:center;padding:10px 0;">
+        <div style="width:60px;text-align:center;"><div style="font-size:14px;font-weight:900;color:#0d9488;">DSS05</div><div style="font-size:9px;font-weight:700;color:white;background:#0d9488;border-radius:3px;padding:1px 6px;display:inline-block;margin-top:2px;">PRIO 4</div></div>
+        <div style="flex:1;margin-left:14px;"><div style="font-size:9px;font-weight:700;color:#64748b;letter-spacing:1px;margin-bottom:3px;">→ LEVEL 3</div><div style="font-size:11px;color:#334155;line-height:1.4;">SOP keamanan terdokumentasi · Tinjauan hak akses berkala · Pemeriksaan keamanan internal · 2FA pada akun kritis</div></div>
+      </div>
+    </div>
+
+    <div style="margin-top:10px;padding:10px 16px;background:#0f1b2d;display:flex;align-items:center;gap:10px;">
+      <iconify-icon icon="lucide:list-ordered" width="16" height="16" style="color:#2dd4bf;"></iconify-icon>
+      <span style="font-size:12px;color:#94a3b8;"><strong style="color:white;">Prioritas:</strong> APO14 & DSS04 (paling tertinggal) → BAI09 → DSS01 → DSS05</span>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SLIDE 18 — KESIMPULAN
+     ══════════════════════════════════════════════════════════ -->
+<div class="slide" id="slide-kesimpulan">
+  <div style="position:absolute;inset:0;background:#fff;"></div>
+  <div style="position:absolute;top:0;left:0;right:0;height:52px;background:#0f1b2d;display:flex;align-items:center;justify-content:space-between;padding:0 48px;z-index:5;">
+    <span style="font-size:11px;font-weight:700;color:#2dd4bf;letter-spacing:2px;">18 · KESIMPULAN</span>
+    <span style="font-size:11px;font-weight:500;color:#64748b;">PT Aegisindo Mitra Sejati</span>
+  </div>
+  <div style="position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,#0d9488,#2dd4bf);z-index:6;"></div>
+
+  <div style="position:relative;z-index:4;padding:76px 56px 32px 56px;height:100%;box-sizing:border-box;display:flex;flex-direction:column;">
+    <h1 style="font-size:28px;font-weight:900;color:#0f1b2d;margin:0 0 4px 0;">Kesimpulan Audit</h1>
+    <div style="width:56px;height:4px;background:#0d9488;border-radius:2px;margin-bottom:16px;"></div>
+
+    <div style="flex:1;display:flex;flex-direction:column;gap:0;">
+      <div style="display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px solid #e2e8f0;">
+        <div style="width:36px;height:36px;background:#0d9488;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:900;color:white;flex-shrink:0;">1</div>
+        <div><div style="font-size:15px;font-weight:700;color:#0f1b2d;">Rata-rata Capability Level <span style="color:#f59e0b;">1.6 / 5.0</span></div>
+        <div style="font-size:13px;color:#475569;margin-top:4px;line-height:1.5;">Tata kelola TI PT Aegisindo <strong>tidak merata</strong>: kuat di operasional fisik (stok & logistik) namun lemah di pengelolaan data digital & keberlangsungan.</div></div>
+      </div>
+      <div style="display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px solid #e2e8f0;">
+        <div style="width:36px;height:36px;background:#0d9488;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:900;color:white;flex-shrink:0;">2</div>
+        <div><div style="font-size:15px;font-weight:700;color:#0f1b2d;">GAP Rata-rata <span style="color:#ef4444;">1.6 Level</span></div>
+        <div style="font-size:13px;color:#475569;margin-top:4px;line-height:1.5;">Seluruh domain masih memerlukan perbaikan signifikan. APO14 & DSS04 menjadi <strong>prioritas utama</strong> karena tertinggal paling jauh (GAP = 2).</div></div>
+      </div>
+      <div style="display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px solid #e2e8f0;">
+        <div style="width:36px;height:36px;background:#0d9488;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:900;color:white;flex-shrink:0;">3</div>
+        <div><div style="font-size:15px;font-weight:700;color:#0f1b2d;">Kekuatan Utama: <span style="color:#10b981;">DSS01 — Operasional Harian</span></div>
+        <div style="font-size:13px;color:#475569;margin-top:4px;line-height:1.5;">Domain dengan skor Level 1 tertinggi (70%). Pemenuhan pesanan lintas saluran merupakan tulang punggung bisnis distribusi.</div></div>
+      </div>
+      <div style="display:flex;gap:14px;align-items:flex-start;padding:14px 0;">
+        <div style="width:36px;height:36px;background:#f59e0b;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:900;color:white;flex-shrink:0;">4</div>
+        <div><div style="font-size:15px;font-weight:700;color:#0f1b2d;">Rekomendasi Bertahap & Realistis</div>
+        <div style="font-size:13px;color:#475569;margin-top:4px;line-height:1.5;">Perbaikan dirancang <strong>bertahap</strong> (Level 2 → 3 → 4) dengan fokus pada data owner, master data, BCP/DRP, SOP terdokumentasi, dan pengukuran kinerja kuantitatif.</div></div>
+      </div>
+    </div>
+
+    <div style="margin-top:12px;padding:12px 20px;background:#0f1b2d;display:flex;align-items:center;gap:12px;">
+      <iconify-icon icon="lucide:flag" width="18" height="18" style="color:#f59e0b;flex-shrink:0;"></iconify-icon>
+      <p style="font-size:13px;color:#94a3b8;margin:0;"><strong style="color:white;">Dengan implementasi rekomendasi secara bertahap</strong>, PT Aegisindo dapat meningkatkan rata-rata CL dari <strong style="color:#2dd4bf;">1.6</strong> menuju <strong style="color:#f59e0b;">3.2</strong>.</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SLIDE 19 — TERIMA KASIH
+     ══════════════════════════════════════════════════════════ -->
+<div class="slide" id="slide-closing">
+  <div style="position:absolute;inset:0;background:#0f1b2d;"></div>
+  <div style="position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,#0d9488,#2dd4bf);z-index:6;"></div>
+  <div style="position:absolute;bottom:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#0d9488,#f59e0b);z-index:6;"></div>
+
+  <div style="position:relative;z-index:4;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 80px;">
+    <div style="width:72px;height:72px;background:linear-gradient(135deg,#0d9488,#2dd4bf);border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:28px;">
+      <iconify-icon icon="lucide:shield-check" width="36" height="36" style="color:white;"></iconify-icon>
+    </div>
+    <h1 style="font-size:42px;font-weight:900;color:white;margin:0 0 10px 0;">Terima Kasih</h1>
+    <div style="width:64px;height:4px;background:linear-gradient(90deg,#0d9488,#f59e0b);border-radius:2px;margin:0 auto 20px auto;"></div>
+    <p style="font-size:16px;color:#94a3b8;line-height:1.6;margin:0 0 32px 0;">
+      Audit Sistem Informasi — PT Aegisindo Mitra Sejati<br>
+      Framework COBIT 2019 · 5 Domain · 6 Responden
+    </p>
+    <div style="display:flex;gap:32px;align-items:center;justify-content:center;">
+      <div style="display:flex;align-items:center;gap:8px;"><iconify-icon icon="lucide:school" width="18" height="18" style="color:#2dd4bf;"></iconify-icon><span style="font-size:14px;color:#e2e8f0;">Universitas Nusa Mandiri</span></div>
+      <div style="display:flex;align-items:center;gap:8px;"><iconify-icon icon="lucide:book-open" width="18" height="18" style="color:#f59e0b;"></iconify-icon><span style="font-size:14px;color:#e2e8f0;">Audit Sistem Informasi</span></div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
