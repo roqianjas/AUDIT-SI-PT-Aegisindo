@@ -61,7 +61,7 @@ normal("Kepada Yth. Bapak/Ibu Responden", bold=True, space_after=6)
 normal("di Tempat", space_after=12)
 
 normal("Dengan hormat,", indent=True, space_after=6)
-normal("Perkenalkan, kami mahasiswa Program Studi Sistem Informasi (S1), Fakultas Teknologi Informasi, Universitas Nusa Mandiri yang sedang melakukan penelitian dalam rangka memenuhi tugas mata kuliah Audit Sistem Informasi. Penelitian ini bertujuan mengevaluasi tata kelola teknologi informasi pada PT Aegisindo Mitra Sejati menggunakan framework COBIT 2019.", indent=True, space_after=6)
+normal("Perkenalkan, kami mahasiswa Program Studi Sistem Informasi (S1), Fakultas Teknologi Informasi, Universitas Nusa Mandiri yang sedang melakukan penelitian dalam rangka memenuhi tugas mata kuliah Audit Sistem Informasi. Penelitian ini bertujuan mengaudit tata kelola teknologi informasi pada PT Aegisindo Mitra Sejati menggunakan framework COBIT 2019.", indent=True, space_after=6)
 normal("Kami mengharapkan kesediaan Bapak/Ibu untuk mengisi kuesioner ini sesuai dengan kondisi nyata di perusahaan. Data yang diperoleh akan digunakan semata-mata untuk kepentingan akademis dan dijamin kerahasiaannya.", indent=True, space_after=6)
 normal("Atas perhatian dan kesediaan Bapak/Ibu, kami ucapkan terima kasih.", indent=True, space_after=12)
 

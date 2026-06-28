@@ -317,7 +317,7 @@ if os.path.exists(LOGO_PATH):
     p_logo = doc.add_paragraph(); p_logo.alignment = WD_ALIGN_PARAGRAPH.CENTER
     p_logo.paragraph_format.space_after = Pt(18); p_logo.paragraph_format.line_spacing = 1.0
     p_logo.add_run().add_picture(LOGO_PATH, width=Cm(5), height=Cm(5))
-centered("EVALUASI TATA KELOLA TEKNOLOGI INFORMASI", 14, bold=True, space_after=0)
+centered("AUDIT TATA KELOLA TEKNOLOGI INFORMASI", 14, bold=True, space_after=0)
 centered("MENGGUNAKAN FRAMEWORK COBIT 2019", 14, bold=True, space_after=0)
 centered("PADA PT AEGISINDO MITRA SEJATI", 14, bold=True, space_after=18)
 centered("Disusun untuk Memenuhi Tugas Mata Kuliah", 12, space_after=0)
@@ -343,7 +343,7 @@ setup_front_matter_section(add_new_section(), start_page=2)
 centered("KATA PENGANTAR", 14, bold=True, space_after=24)
 for para in [
     "Puji syukur kami panjatkan kehadirat Tuhan Yang Maha Esa, karena atas berkat dan rahmat-Nya kami dapat menyelesaikan laporan project audit sistem informasi ini dengan baik. Laporan ini disusun untuk memenuhi tugas mata kuliah Audit Sistem Informasi (453) pada Program Studi Sistem Informasi (S1), Fakultas Teknologi Informasi, Universitas Nusa Mandiri.",
-    "Laporan ini membahas evaluasi tata kelola teknologi informasi pada PT Aegisindo Mitra Sejati menggunakan framework COBIT 2019. Melalui audit ini, kami melakukan penilaian terhadap tingkat kapabilitas (capability level) tata kelola TI pada lima domain yang relevan dengan kondisi perusahaan, yaitu APO14 (Managed Data), BAI09 (Managed Assets), DSS01 (Managed Operations), DSS04 (Managed Continuity), dan DSS05 (Managed Security Services).",
+    "Laporan ini membahas audit tata kelola teknologi informasi pada PT Aegisindo Mitra Sejati menggunakan framework COBIT 2019. Melalui audit ini, kami melakukan penilaian terhadap tingkat kapabilitas (capability level) tata kelola TI pada lima domain yang relevan dengan kondisi perusahaan, yaitu APO14 (Managed Data), BAI09 (Managed Assets), DSS01 (Managed Operations), DSS04 (Managed Continuity), dan DSS05 (Managed Security Services).",
     "Kami menyadari bahwa laporan ini masih jauh dari sempurna. Oleh karena itu, kami mengharapkan kritik dan saran yang membangun dari Ibu dosen pengampu dan rekan-rekan mahasiswa guna penyempurnaan laporan ini di kemudian hari.",
     "Kami mengucapkan terima kasih kepada Ibu Juarni Siregar, S.Pd., M.Kom selaku dosen pengampu, PT Aegisindo Mitra Sejati sebagai objek studi kasus, seluruh responden yang telah berpartisipasi, serta semua pihak yang telah membantu penyelesaian laporan ini.",
     "Semoga laporan ini dapat memberikan manfaat dan kontribusi dalam pengembangan tata kelola teknologi informasi, khususnya bagi perusahaan distribusi alat keselamatan kerja.",

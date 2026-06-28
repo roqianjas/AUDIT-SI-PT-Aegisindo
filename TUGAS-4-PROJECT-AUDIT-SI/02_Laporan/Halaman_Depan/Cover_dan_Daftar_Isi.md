@@ -6,7 +6,7 @@
 
 # LAPORAN PROJECT AUDIT SISTEM INFORMASI
 
-## EVALUASI TATA KELOLA TEKNOLOGI INFORMASI MENGGUNAKAN FRAMEWORK COBIT 2019 PADA PT AEGISINDO MITRA SEJATI
+## AUDIT TATA KELOLA TEKNOLOGI INFORMASI MENGGUNAKAN FRAMEWORK COBIT 2019 PADA PT AEGISINDO MITRA SEJATI
 
 <br><br>
 
@@ -46,7 +46,7 @@
 
 Puji syukur kami panjatkan kehadirat Tuhan Yang Maha Esa, karena atas berkat dan rahmat-Nya kami dapat menyelesaikan laporan project audit sistem informasi ini dengan baik. Laporan ini disusun untuk memenuhi tugas mata kuliah Audit Sistem Informasi (453) pada Program Studi Sistem Informasi (S1), Fakultas Teknologi Informasi, Universitas Nusa Mandiri.
 
-Laporan ini membahas evaluasi tata kelola teknologi informasi pada PT Aegisindo Mitra Sejati menggunakan framework COBIT 2019. Melalui audit ini, kami melakukan penilaian terhadap tingkat kapabilitas (capability level) tata kelola TI pada lima domain yang relevan dengan kondisi perusahaan, yaitu APO14 (Managed Data), BAI09 (Managed Assets), DSS01 (Managed Operations), DSS04 (Managed Continuity), dan DSS05 (Managed Security Services).
+Laporan ini membahas audit tata kelola teknologi informasi pada PT Aegisindo Mitra Sejati menggunakan framework COBIT 2019. Melalui audit ini, kami melakukan penilaian terhadap tingkat kapabilitas (capability level) tata kelola TI pada lima domain yang relevan dengan kondisi perusahaan, yaitu APO14 (Managed Data), BAI09 (Managed Assets), DSS01 (Managed Operations), DSS04 (Managed Continuity), dan DSS05 (Managed Security Services).
 
 Kami menyadari bahwa laporan ini masih jauh dari sempurna. Oleh karena itu, kami mengharapkan kritik dan saran yang membangun dari Ibu dosen pengampu dan rekan-rekan mahasiswa guna penyempurnaan laporan ini di kemudian hari.
 
